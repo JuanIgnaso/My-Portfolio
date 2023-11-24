@@ -1,5 +1,5 @@
 # Este es el Repo de mi posible Portfolio
-##Tecnologías usadas por el momento:
+## Tecnologías usadas por el momento:
 <ol>
  <li>CSS con framework TailWind</li>
  <li>HTML</li>
