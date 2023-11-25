@@ -1,17 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,500;1,800&display=swap');
 
+
+
+/*LIGHT THEME COLORS*/
+/*
+Primer color: #e7eaf6
+Segundo color: #a2a8d3
+Tercer color: #38598b
+Cuarto color: #113f67
+*/
+
+
+
 body{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    background-color:var(--color-body);
+    color:var(--color-texto);
 }
 
 h1,h2,h3,h4{
     font-weight: 700;
-    color: var(--color-cabeceras)
 }
 
-.caja{
-    border:3px solid green;
+h1{
+    color:var(--color-cabeceras-principales);
+}
+
+h2,h3,h4{
+    color:var(--color-cabecera-secundaria);
+}
+
+.articulo{
+    border: 4px solid #a2a8d3; 
+    background-color: var(--color-fondo);
 }
 
 #mifoto{
@@ -19,9 +41,35 @@ h1,h2,h3,h4{
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid violet;
+    border: 4px solid var(--color-cabecera-secundaria);
+}
+
+#info_Cabecera strong{
+    color:var(--color-cabeceras-principales);
+}
+
+#darkmode-btn{
+    border: 4px solid var(--color-cabecera-secundaria);
+}
+
+#darkmode-btn i{
+    color:var(--boton-dark-mode);
 }
 
 :root{
-    --color-cabeceras:lime;
+    --color-cabeceras-principales:#113f67;
+    --color-cabecera-secundaria:#38598b;
+    --color-fondo:#e7eaf6;
+    --color-body:#fff;
+    --color-texto:#000;
+    --boton-dark-mode:orangered;
+}
+
+.dark-mode{
+    --color-body:#0f172a;
+    --color-texto:#e7eaf6;
+    --color-cabecera-secundaria:#a2a8d3;
+    --color-fondo:#113f67;
+    --color-cabeceras-principales:#808ad3;
+    --boton-dark-mode: var(--color-texto);
 }

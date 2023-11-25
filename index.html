@@ -13,27 +13,71 @@
     </style>
 </head>
 <body>
-    <button class="absolute p-[0.5%] left-[10px] border-solid border-4 border-purple-600">hi</button>
-<h1 class="text-center">Bienvenido, Mi nombre es Juan</h1>
+    <button id="darkmode-btn" class="absolute w-[40px] h-[40px] top-[10px] left-[10px]"><i class="fa-regular fa-sun text-xl"></i></button>
+    <h4 class="text-center" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
+    <h1 class="text-center">Bienvenido, Mi nombre es Juan</h1>
 
-    <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
-
-    <section class="mt-[50px] w-1/2 m-auto flex flex-col gap-4">
-        <h2 class="text-center">Header Section example</h2>
-        <div class=" w-full p-[10px] text-center text-purple-800  border-solid border-4  border-indigo-500 ">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
-        </div>
-    
-        <div class=" w-full p-[10px]  text-center text-purple-800  border-solid border-4 border-indigo-500 ">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
-        </div>
-    
-        <div class=" w-full p-[10px] text-center text-purple-800  border-solid border-4 border-indigo-500 ">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
+    <section class="mt-[20px] w-[90%] sm:w-1/2 m-auto">
+        <article class='text-center'>
+            <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
+            <h2>Sobre Mí:</h2>
+            <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End, con poca experiencia pero siempre con ganas y ambición de saber más.</p>
+        </article>
+        <h2 class="text-center mb-4">Header Section example</h2>
+        <div class="w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4">
+            <div class="articulo  p-[10px] text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
+            </div>
+        
+            <div class="articulo p-[10px]  text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
+            </div>
+        
+            <div class="articulo p-[10px] text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
+            </div>
         </div>
     </section>
     
+<script>
+    //DarkMode Script//
+    let darkModeState = false;   
 
+    let icon = document.querySelector('#darkmode-btn i');
+
+    const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    //Botón para cambiar entre modo oscuro y claro
+    let darkmode = document.querySelector('#darkmode-btn');
+
+    function toggleDarkMode(state){
+        document.documentElement.classList.toggle("dark-mode", state);
+        darkModeState = state;
+        state ? icon.setAttribute('class','fa-regular fa-moon text-xl') : icon.setAttribute('class','fa-regular fa-sun text-xl')
+    }
+
+    // Sets localStorage state
+    function setDarkModeLocalStorage(state) {
+    localStorage.setItem("dark-mode", state);
+    }
+
+    // Initial setting
+    toggleDarkMode(localStorage.getItem("dark-mode") == "true");
+
+    // Listen for changes in the OS settings.
+    // Note: the arrow function shorthand works only in modern browsers,
+    // for older browsers define the function using the function keyword.
+    useDark.addListener((evt) => toggleDarkMode(evt.matches));
+
+    // Toggles the "dark-mode" class on click and sets localStorage state
+    darkmode.addEventListener("click", () => {
+    darkModeState = !darkModeState;
+
+    toggleDarkMode(darkModeState);
+    setDarkModeLocalStorage(darkModeState);
+    });
+
+</script>
     
 </body>
 </html>
