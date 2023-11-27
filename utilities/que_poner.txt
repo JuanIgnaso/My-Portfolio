@@ -11,3 +11,4 @@ da bien.
 4-Experiencia Laboral, sitios donde has trabajado.
 
 5-Muestra de trabajos hechos: proyectos realizados.
+    -Detalles del proyecto, que funciones tiene, tecnologías usadas...

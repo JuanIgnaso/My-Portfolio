@@ -12,32 +12,56 @@
 
     </style>
 </head>
-<body>
+<body class="animate-web_Load">
     <button id="darkmode-btn" class="absolute w-[40px] h-[40px] top-[10px] left-[10px]"><i class="fa-regular fa-sun text-xl"></i></button>
-    <h4 class="text-center" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
-    <h1 class="text-center">Bienvenido, Mi nombre es Juan</h1>
+    <h4 class="text-center md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
 
-    <section class="mt-[20px] w-[90%] sm:w-1/2 m-auto">
-        <article class='text-center'>
-            <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
+    <nav class="w-[15%] m-[8px] absolute z-20 top-[35%]">
+        <ol class="bg-red-700">
+            <li>Sobre Mí</li>
+            <li>Mis Habilidades</li>
+            <li>Certificaciones</li>
+            <li>Experiencia Laboral</li>
+            <li>Mis Trabajos</li>
+        </ol>
+    </nav>
+
+    <!-- CONTENEDOR DE LA WEB -->
+    <div class="mt-[20px] w-[90%] sm:w-[80%] lg:w-[60%] m-auto">
+
+    <h1 class="text-center">Bienvenido, Mi nombre es Juan</h1>
+        <article class='text-left'>
+            <figure>
+                <figcaption class="text-center mb-[10px] capitalize">- programador y Desarrollador Web -</figcaption>
+                <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
+            </figure>
+            
             <h2>Sobre Mí:</h2>
-            <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End, con poca experiencia pero siempre con ganas y ambición de saber más.</p>
+            <!-- Section divider -->
+            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
+            <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
         </article>
-        <h2 class="text-center mb-4">Header Section example</h2>
-        <div class="w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4">
-            <div class="articulo  p-[10px] text-center">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
-            </div>
+
+        <!-- SECCION:
+        Mis Habilidades
+        -->
+
+
+        <!-- SECCION:
+        Certificaciones
+        -->
+
+        <!-- SECCION:
+        Experiencia Laboral
+        -->
+
+
+        <!--SECCION: 
+        Trabajos realizados
+         -->
         
-            <div class="articulo p-[10px]  text-center">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
-            </div>
-        
-            <div class="articulo p-[10px] text-center">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magni doloremque culpa, nisi dolore porro eum incidunt quam dignissimos labore deserunt mollitia laborum? Minima excepturi laudantium optio animi a exercitationem!</p>
-            </div>
-        </div>
-    </section>
+    </div>
     
 <script>
     //DarkMode Script//
