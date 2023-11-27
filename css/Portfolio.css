@@ -63,6 +63,44 @@ h2,h3,h4{
     color:var(--boton-dark-mode);
 }
 
+/* ACCION BOTÓN DEL MENU */
+.botonMenu{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+    gap: 5px;    
+    color:var(--color-cabecera-secundaria);
+}
+
+.transformar{
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out;
+}
+
+.menu_abierto{
+    width: 100%;
+}
+
+/* CONTENIDO DEL MENÚ LATERAL */
+
+
+.contenido_menu_inicio{
+    opacity: 0;
+    background-color: var(--color-fondo);
+}
+
+.contenido_visible{
+    opacity: 1;
+}
+
+.mostrar_menu{
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out;
+}
+
+
+
 :root{
     --color-cabeceras-principales:#113f67;
     --color-cabecera-secundaria:#38598b;

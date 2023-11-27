@@ -16,14 +16,18 @@
     <button id="darkmode-btn" class="absolute w-[40px] h-[40px] top-[10px] left-[10px]"><i class="fa-regular fa-sun text-xl"></i></button>
     <h4 class="text-center md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
 
-    <nav class="w-[15%] m-[8px] absolute z-20 top-[35%]">
-        <ol class="bg-red-700">
-            <li>Sobre Mí</li>
-            <li>Mis Habilidades</li>
-            <li>Certificaciones</li>
-            <li>Experiencia Laboral</li>
-            <li>Mis Trabajos</li>
+    <!-- MENÚ DE INICIO -->
+
+    <nav class="w-[12%] m-[8px] fixed z-20 top-[35%]">
+        <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu">
+            <li><a href="#sobreMi">Sobre Mi</a></li>
+            <li><a href="#habilidades">Mis Habilidades</a></li>
+            <li><a href="#estudios">Mis Estudios</a></li>
+            <li><a href="#experiencia">Experiencia Laboral</a></li>
+            <li><a href="#proyectos">Mis Proyectos</a></li>
         </ol>
+        <button id="btnMenu" class="botonMenu transformar font-bold text-left border-t-4 border-portfolioAzul2">Menú<i class="fa-solid fa-house"></i></button>
+        <script src="utilities/js/activateLeftMenu.js"></script>
     </nav>
 
     <!-- CONTENEDOR DE LA WEB -->
@@ -36,7 +40,7 @@
                 <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
             </figure>
             
-            <h2>Sobre Mí:</h2>
+            <h2 id="sobreMi">Sobre Mí:</h2>
             <!-- Section divider -->
             <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
             <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
@@ -46,20 +50,45 @@
         <!-- SECCION:
         Mis Habilidades
         -->
+        <section>
+            <h2 id="habilidades">Mis Habilidades:</h2>
+            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
 
+        </section>
 
         <!-- SECCION:
         Certificaciones
         -->
 
+        <section>
+            <h2 id="estudios">Mis Estudios:</h2>
+            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
+
+        </section>
+
         <!-- SECCION:
         Experiencia Laboral
         -->
+
+        <section>
+            <h2 id="experiencia">Mi Experiencia Laboral:</h2>
+            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
+
+        </section>
 
 
         <!--SECCION: 
         Trabajos realizados
          -->
+         <section>
+            <h2 id="proyectos">Proyectos Realizados:</h2>
+            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
+
+        </section>
         
     </div>
     
