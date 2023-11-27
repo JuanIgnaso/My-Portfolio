@@ -18,13 +18,16 @@
 
     <!-- MENÚ DE INICIO -->
 
-    <nav class="w-[12%] m-[8px] fixed z-20 top-[35%]">
-        <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu">
-            <li><a href="#sobreMi">Sobre Mi</a></li>
-            <li><a href="#habilidades">Mis Habilidades</a></li>
-            <li><a href="#estudios">Mis Estudios</a></li>
-            <li><a href="#experiencia">Experiencia Laboral</a></li>
-            <li><a href="#proyectos">Mis Proyectos</a></li>
+    <!-- top-[60%]
+    versión movil -> bottom-[0%] right-[0%]
+    -->
+    <nav id="sideBarMenu" class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col">
+        <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu pr-[5px] sm:pr-0">
+            <li class="mb-[5px] hover:font-bold"><a href="#sobreMi">Sobre Mi</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#habilidades">Mis Habilidades</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#estudios">Mis Estudios</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#experiencia">Experiencia Laboral</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#proyectos">Mis Proyectos</a></li>
         </ol>
         <button id="btnMenu" class="botonMenu transformar font-bold text-left border-t-4 border-portfolioAzul2">Menú<i class="fa-solid fa-house"></i></button>
         <script src="utilities/js/activateLeftMenu.js"></script>

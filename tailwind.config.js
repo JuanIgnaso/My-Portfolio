@@ -2,6 +2,13 @@
 module.exports = {
   content: ["*.{html,js}"],
   theme: {
+    /*Para modificar los breakpoints*/
+    // screens: {
+    //   sm: '480px',
+    //   md: '768px',
+    //   lg: '976px',
+    //   xl: '1440px',
+    // },
     extend: {
       colors:{
         //Tonos de azul por número, menor-> mas claro, mayor->mas oscuro
