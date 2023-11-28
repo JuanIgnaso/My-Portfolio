@@ -30,6 +30,7 @@ module.exports = {
       //Definir comportamiento de animaciones
       animation:{
         web_Load: 'web_Load 2s ease-out',
+        showUp: 'web_Load 0.7s ease-out',
       }
     },
     

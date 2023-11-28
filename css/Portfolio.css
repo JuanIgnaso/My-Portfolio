@@ -37,6 +37,20 @@ h2,h3,h4{
     color:var(--color-cabecera-secundaria);
 }
 
+#descargar_cv{
+    font-size: clamp(0.82em,3vw,1em);
+}
+
+#descargar_cv_url ~ span{
+    opacity: 0;
+}
+
+#descargar_cv_url:hover ~ span{
+    animation: Web_Load 0.5s ease-out forwards;
+}
+
+
+
 .articulo{
     border: 4px solid #a2a8d3; 
     background-color: var(--color-fondo);
@@ -136,9 +150,13 @@ h2,h3,h4{
     font-size: clamp(5.25em,4vw,6em);
 }
 
+#otras_habilidades i{
+    color: var(--color-items-lista);
+}
 
 :root{
     --color-cabeceras-principales:#113f67;
+    --color-items-lista: #12548d;
     --color-cabecera-secundaria:#38598b;
     --color-fondo:#e7eaf6;
     --color-body:#fff;
