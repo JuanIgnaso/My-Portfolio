@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/output.css">
     <link rel="stylesheet" href="/css/Portfolio.css">
+
+    <!-- ICONOS -->
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="/fontawesome/css/all.css">
+    
     <title>Mi Portfolio</title>
 </head>
 <body class="animate-web_Load">
@@ -30,28 +34,149 @@
     <!-- CONTENEDOR DE LA WEB -->
     <div class="mt-[20px] w-[90%] sm:w-[80%] lg:w-[60%] m-auto">
 
-    <h1 class="text-center">Bienvenido, Mi nombre es Juan</h1>
-        <article class='text-left'>
+        <header class='text-left'>
+            <h1 id="titular_pagina" class="text-center">Bienvenido, Mi nombre es Juan</h1>
             <figure>
                 <figcaption class="text-center mb-[10px] capitalize">- programador y Desarrollador Web -</figcaption>
                 <img class="m-auto shadow-2xl" id="mifoto" src="/utilities/img/my_profile_photo.jpg" alt="mi_foto">
             </figure>
-            
+        </header>
+
+        <!-- SECCION:
+        Sobre Mí
+        -->
+        <section class="mb-[25px]">
             <h2 id="sobreMi">Sobre Mí:</h2>
             <!-- Section divider -->
             <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
             <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
             <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
-        </article>
+        </section>
+
 
         <!-- SECCION:
         Mis Habilidades
         -->
-        <section>
-            <h2 id="habilidades">Mis Habilidades:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
+        <section class="mb-[25px]">
+            <header class="mb-[10px]">
+                <h2 id="habilidades">Mis Habilidades:</h2>
+                <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+                <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
+            </header>
+             <article>
+                <h3>Lenguajes</h3>
+                <!-- Divisor de subapartados -->
+                <div class="border-[1px] border-gray-300 mt-[5px] mb-[10px]"></div>
+                <!-- //////// -->
+                <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
 
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Medio</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-html5 habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>HTML</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Medio</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-css3 habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                            </li>
+                        </ol>     
+                    </li>
+
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Básico</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-js habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Básico</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-php habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>PHP</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                </ol>
+            </article>               
+              
+            <article>
+                <h3>Frameworks</h3>
+                <div class="border-[1px] border-gray-300 mt-[5px] mb-[10px]"></div>
+                <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Básico</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-react  habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>React</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Básico</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-bootstrap habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>BootStrap</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="border-4 border-cyan-800 habilidades-container">
+                        <ol class=" flex flex-col items-center gap-2">
+                            <li>
+                                <h4 class="text-center">Nivel: <strong>Medio</strong></h4>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-wind habilidades-icon"></i>
+                            </li>
+                            <li>
+                                <p>TailWind</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </article>
+            <script src="utilities/js/defineLvlColor.js"></script>
         </section>
 
         <!-- SECCION:
@@ -89,45 +214,6 @@
         
     </div>
     
-<script>
-    //DarkMode Script//
-    let darkModeState = false;   
-
-    let icon = document.querySelector('#darkmode-btn i');
-
-    const useDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-    //Botón para cambiar entre modo oscuro y claro
-    let darkmode = document.querySelector('#darkmode-btn');
-
-    function toggleDarkMode(state){
-        document.documentElement.classList.toggle("dark-mode", state);
-        darkModeState = state;
-        state ? icon.setAttribute('class','fa-regular fa-moon text-xl') : icon.setAttribute('class','fa-regular fa-sun text-xl')
-    }
-
-    // Sets localStorage state
-    function setDarkModeLocalStorage(state) {
-    localStorage.setItem("dark-mode", state);
-    }
-
-    // Initial setting
-    toggleDarkMode(localStorage.getItem("dark-mode") == "true");
-
-    // Listen for changes in the OS settings.
-    // Note: the arrow function shorthand works only in modern browsers,
-    // for older browsers define the function using the function keyword.
-    useDark.addListener((evt) => toggleDarkMode(evt.matches));
-
-    // Toggles the "dark-mode" class on click and sets localStorage state
-    darkmode.addEventListener("click", () => {
-    darkModeState = !darkModeState;
-
-    toggleDarkMode(darkModeState);
-    setDarkModeLocalStorage(darkModeState);
-    });
-
-</script>
-    
+<script src="utilities/js/toggleDarkMode.js"></script>
 </body>
 </html>

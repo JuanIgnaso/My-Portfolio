@@ -42,6 +42,10 @@ h2,h3,h4{
     background-color: var(--color-fondo);
 }
 
+#titular_pagina{
+    font-size:clamp(2.25rem,4vw,3rem);
+}
+
 #mifoto{
     width: 350px;
     height: 350px;
@@ -119,6 +123,19 @@ h2,h3,h4{
     align-items: start;
 }
 
+.habilidades-container{
+    background-color:var(--color-fondo);
+}
+
+.habilidades-container h4{
+    font-size: clamp(0.9em,4vw,1.12em);
+}
+
+.habilidades-icon{
+    color:var(--color-cabeceras-principales);
+    font-size: clamp(5.25em,4vw,6em);
+}
+
 
 :root{
     --color-cabeceras-principales:#113f67;
@@ -138,9 +155,18 @@ h2,h3,h4{
     --boton-dark-mode: var(--color-texto);
 }
 
+@media screen and (max-width: 360px){
+    #mifoto{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
 @media screen and (max-width: 1020px){
     .contenido_menu_inicio{
         background-color:  var(--color-fondo);
+        box-shadow: 0px 0px 10px 3px var(--color-texto);
     }
 
     .botonMenu{

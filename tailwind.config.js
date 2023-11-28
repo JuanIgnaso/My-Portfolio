@@ -15,7 +15,8 @@ module.exports = {
         'portfolioAzul1' : '#e7eaf6',
         'portfolioAzul2': '#a2a8d3', 
         'porfolioAzul3' : '#38598b',
-        'portfolioAzul4' : '#113f67'
+        'portfolioAzul4' : '#113f67',
+        'nivelBasico': 'text-blue-600'
 
         //Otros colores
       },
