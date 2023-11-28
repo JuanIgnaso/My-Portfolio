@@ -11,8 +11,6 @@ btnMenu.addEventListener('click',function(){
 });
 
 
-
-
 let portrait = window.matchMedia("(orientation: portrait)");
 let screenOrientation = false;
 
