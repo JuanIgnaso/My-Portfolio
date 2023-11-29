@@ -205,18 +205,51 @@
                     </li>
                 </ol>
             </article>
+            <!-- 
+                Para uso de :before y :after
+                before/after:content-[contenido]
+
+                Para meter estilos usamos el selector:'propiedad'
+                after:absolute...o after:text-red-600....
+
+             -->
             
             <script src="utilities/js/defineLvlColor.js"></script>
         </section>
-
-        <!-- SECCION:
+        <!-- 
         Certificaciones
         -->
-
         <section>
             <h2 id="estudios">Mis Estudios:</h2>
             <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
-            <p>Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
+            <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
+            <!-- Centro,titulo,inicio y fin y nota
+             grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
+            -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-[15px]">
+                <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
+                    <div>
+                        <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
+                            <li><h3>Tec Medio - Sistemas Microinformáticos y Redes</h3></li>
+                            <li><p><strong>IES Pazo da Mercé</strong> 2019/2021</p></li>
+                        </ol>
+                    </div>
+                    <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">6,4</span>
+                </article>
+                
+                <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
+                    <div>
+                        <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
+                            <li><h3>Tec Sup - Diseño de Aplicaciones Web</h3></li>
+                            <li><p><strong>IES Pazo da Mercé</strong> 2021/2023</p></li>
+                        </ol>
+
+                    </div>
+                    <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">7,9</span>
+                </article>
+
+            </div>
+            
         </section>
 
         <!-- SECCION:

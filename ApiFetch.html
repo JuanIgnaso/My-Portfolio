@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prueba de API Fetch</h1>
+    <button type="button" onclick="showEmployees()" style="color:white;
+                                                           background-color:black;
+                                                           border:1px solid red;">
+    Click me</button>
+    <script>
+
+       
+        /*
+        Se crea una Promesa con fetch y la URL a donde queremos hacer
+        la petición.
+
+        Devuelve promise que:
+        -se acepta si pudo completar la operación
+        -rechaza si hubo algún problema de red o no pudo realizar la operación
+        */
+        showEmployees = () =>{
+            fetch("utilities/json/employees.json")
+            .then(response => response.text())
+            .then(data => {
+                const json = JSON.parse(data);
+                printData(json);
+            }).catch(err =>{
+                document.innerHTML += `Error: ${err.message}`;
+            })
+
+            function printData(json){
+                json.forEach(element => {
+                    document.body.innerHTML += `<p><strong style="color:red;">Nombre:</strong> ${element.name}, <strong>Trabajo:</strong> ${element.job} </p>`;
+                });
+            }
+        }
+        
+    </script>
+</body>
+</html>

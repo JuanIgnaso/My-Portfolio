@@ -1,0 +1,9 @@
+[
+    {"name":"Raul","salary":1200,"job":"Junior SQL Designer","contactInfo":{"phone":999999999,"email":"raulemail@gmail.com"}},
+    {"name":"Joseph","salary":1990,"job":"Senior Python Programer","contactInfo":{"phone":998888889,"email":"josephemail@gmail.com"}},
+    {"name":"Daniel","salary":1680,"job":"Junior FrontEnd Dev","contactInfo":{"phone":977770099,"email":"danielemail@gmail.com"}},
+    {"name":"Hannah","salary":1990,"job":"Senior FrontEnd Dev","contactInfo":{"phone":911999911,"email":"hannahemail@gmail.com"}},
+    {"name":"Mary","salary":1590,"job":"Junior PHP Programer","contactInfo":{"phone":999666698,"email":"maryemail@gmail.com"}},
+    {"name":"John","salary":1446,"job":"Junior PHP Programer","contactInfo":{"phone":999399098,"email":"johnemail@gmail.com"}},
+    {"name":"Mike","salary":2100,"job":"Senior Java Programer","contactInfo":{"phone":999575999,"email":"mikeemail@gmail.com"}}
+]

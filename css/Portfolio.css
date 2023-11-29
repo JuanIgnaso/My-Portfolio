@@ -108,6 +108,15 @@ h2,h3,h4{
     width: 100%;
 }
 
+.certificacion-box{
+    background-image:linear-gradient(to right,var(--color-body),var(--color-fondo));
+}
+
+.certificacion-box span{
+    color:var(--color-nota);
+}
+
+
 /* CONTENIDO DEL MENÚ LATERAL */
 
 
@@ -162,6 +171,7 @@ h2,h3,h4{
     --color-body:#fff;
     --color-texto:#000;
     --boton-dark-mode:orangered;
+    --color-nota:#113f67;
 }
 
 .dark-mode{
@@ -171,6 +181,7 @@ h2,h3,h4{
     --color-fondo:#113f67;
     --color-cabeceras-principales:#808ad3;
     --boton-dark-mode: var(--color-texto);
+    --color-nota:#a2a8d3;
 }
 
 @media screen and (max-width: 360px){
