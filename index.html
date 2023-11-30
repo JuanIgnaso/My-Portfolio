@@ -273,8 +273,52 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis eligendi, exercitationem accusantium vel ad voluptate labore facilis. Quo, quam. Qui enim totam, necessitatibus consectetur praesentium perspiciatis aperiam non beatae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam quo laborum molestiae distinctio, voluptate nulla facilis magni repudiandae, eligendi molestias placeat soluta optio, dolorem maxime modi non vero praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptates voluptatem aliquid rerum beatae consequatur libero, quos culpa itaque perspiciatis harum sit soluta repellat laboriosam natus amet voluptatum accusantium. Obcaecati! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, nisi rem molestias quae dolor accusantium deserunt laborum voluptates dolores obcaecati, cupiditate, in laboriosam beatae dolore inventore atque porro repellendus veniam?</p>
 
         </section>
-        
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <section>
+            <header class="flex flex-col align-top">
+                <h2 class="text-right text-4xl" id="contactame">Contáctame</h2>
+                <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            </header>
+            
+            <!-- FORMULARIO -->
+            <form action="" class="flex flex-col">
+               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
+                    <div class="flex flex-col ">
+                        
+                        <label for="nombre" class="flex content-center items-center">Tu nombre <div class="relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce Aquí tu nombre</p></div></label>
+                        <input required pattern="[a-zA-Z]{3,16}" type="text" name="nombre" id="nombre" class="form-input invalid:text-red-600 " placeholder="Introduce aquí tu nombre..." title="Introduzca un nombre, recuerde, solo letras y espacios">
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <label for="correo"class="flex content-center items-center">Tu correo <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce un correo que sea válido</p></div></label>
+                        <input required type="email" name="correo" id="correo" class="form-input invalid:text-red-600 " placeholder="Escribe aqui tu correo..." title="Introduce un correo que sea válido">
+                    </div>
+               </div>
+
+               <div class="flex flex-col mb-4">
+                    <label for="motivo" class="flex content-center items-center">Motivo <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba el motivo del mensaje</p></div></label>
+                    <input required type="text" name="motivo" id="motivo" minlength="5" class=" form-input invalid:text-red-600 " placeholder="Motivo del correo..." title="Escriba el motivo del correo al menos 5 caracteres">
+                </div>
+
+                <div class="flex flex-col mb-4">
+                    <label for="mensaje" class="flex content-center items-center">Mensaje <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba aquí el contenido del mensaje</p></div></label>
+                    <textarea required placeholder="Cual es tu duda?" minlength="10" name="mensaje" id="mensaje" cols="30" rows="10" form="" class="form-textarea invalid:text-red-600"></textarea>
+                <!-- nombre,correo,motivo,mensaje y submit -->
+                </div>
+
+                <button type="submit" id="enviar" class="p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+
+        </section>
+
     </div>
+
+
+    <!-- FOOTER DE LA WEB -->
+    <footer class="w-full bg-red-500">
+        <p class="text-center">Footer de la Web</p>
+    </footer>
     
 <script src="utilities/js/toggleDarkMode.js"></script>
 </body>

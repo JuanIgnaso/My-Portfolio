@@ -37,6 +37,22 @@ h2,h3,h4{
     color:var(--color-cabecera-secundaria);
 }
 
+label{
+    font-weight: 700;
+    color:var(--color-cabeceras-principales);
+    font-size: clamp(1em,4vw,1.25em);
+}
+
+input,textarea{
+    border: 3px solid var(--color-cabecera-secundaria) !important;
+    background-color: var(--color-body) !important;
+}
+
+#enviar{
+    color:white;
+    background-color: #113f67;
+}
+
 #descargar_cv{
     font-size: clamp(0.82em,3vw,1em);
 }
@@ -102,6 +118,19 @@ h2,h3,h4{
 .transformar{
     transition-duration: 0.75s;
     transition-timing-function: ease-out;
+}
+
+.ayuda + p{
+    opacity: 0;
+}
+
+.ayuda:hover ~ p{
+    animation: showHelp 0.7s forwards;
+}
+
+@keyframes showHelp {
+    0%{opacity:0;}
+    100%{opacity: 1}
 }
 
 .menu_abierto{
