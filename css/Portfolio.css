@@ -124,9 +124,11 @@ input,textarea{
     opacity: 0;
 }
 
-.ayuda:hover ~ p{
+
+.ayuda:hover + p{
     animation: showHelp 0.7s forwards;
 }
+
 
 @keyframes showHelp {
     0%{opacity:0;}
@@ -191,6 +193,7 @@ input,textarea{
 #otras_habilidades i{
     color: var(--color-items-lista);
 }
+
 
 :root{
     --color-cabeceras-principales:#113f67;

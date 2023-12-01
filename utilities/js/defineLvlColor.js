@@ -11,8 +11,6 @@ const habilities_lvl = document.querySelectorAll('.habilidades-container strong'
 habilities_lvl.forEach(element => {
     let lvl = element.innerHTML.toLowerCase();
 
-    console.log(lvl);
-
     switch(lvl){
         case 'básico':
             element.classList.toggle('text-blue-600');

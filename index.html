@@ -281,35 +281,77 @@
                 <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
             </header>
             
-            <!-- FORMULARIO -->
+            <div class="flex flex-col">
+                <h3 class="text-right text-2xl mt-3">Mis Contactos</h3>
+                <div class="flex flex-row-reverse">
+                    <ol id="mis_contactos_list" class="text-right text-xl">
+                        <li class="flex gap-2 items-center justify-end">Linkedin <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a></li>
+                        <li class="flex gap-2 items-center justify-end">+34 999 999 999<i class="fa-solid fa-phone  text-portfolioAzul4"></i></li>
+                        <li class="flex gap-2 items-center justify-end">Github <a href=""><i class="fa-brands fa-github  text-portfolioAzul4"></i></a></li>
+                    </ol>
+                </div>
+                
+            </div>
+            <!-- FORMULARIO 
+             required pattern="[a-zA-Z]{3,16}" type="text" name="nombre" id="nombre" class="form-input invalid:text-red-600 " placeholder="Introduce aquí tu nombre..." title="Introduzca un nombre, recuerde, solo letras y espacios"
+            -->
+            <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
             <form action="" class="flex flex-col">
                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
-                    <div class="flex flex-col ">
-                        
-                        <label for="nombre" class="flex content-center items-center">Tu nombre <div class="relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce Aquí tu nombre</p></div></label>
-                        <input required pattern="[a-zA-Z]{3,16}" type="text" name="nombre" id="nombre" class="form-input invalid:text-red-600 " placeholder="Introduce aquí tu nombre..." title="Introduzca un nombre, recuerde, solo letras y espacios">
+                    <div class="flex flex-col">
+                        <label for="nombre" class="flex content-center items-center">
+                            Nombre 
+                            <div class="relative ml-2">
+                                <i class="fa-solid fa-circle-info ayuda"></i>
+                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba su nombre aquí</p>
+                            </div>
+                        </label>
+                        <input required type="text" name="nombre" oninvalid="showAlert(this,'Introduce un nombre de entre 3 y 16 caracteres, solo letras estan permitidas.')" id="nombre" pattern="[a-zA-Z]{3,16}" class="form-input  invalid:text-red-600 " placeholder="Introduce aquí tu nombre...">
+                        <p id="nombre_error" class="text-xs text-red-700 text-alert"></p>
                     </div>
                     
                     <div class="flex flex-col">
-                        <label for="correo"class="flex content-center items-center">Tu correo <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce un correo que sea válido</p></div></label>
-                        <input required type="email" name="correo" id="correo" class="form-input invalid:text-red-600 " placeholder="Escribe aqui tu correo..." title="Introduce un correo que sea válido">
+                        <label for="correo"class="flex content-center items-center">
+                            Tu correo 
+                            <div class="relative ml-2">
+                                <i class="fa-solid fa-circle-info ayuda"></i>
+                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce un correo que sea válido</p>
+                            </div>
+                        </label>
+                        <input required type="email" name="correo" id="correo" oninvalid="showAlert(this,'Porfavor, introduce un correo válido.')" class="form-input invalid:text-red-600 " placeholder="Escribe aqui tu correo..." title="Introduce un correo que sea válido">
+                        <p id="correo_error" class="text-xs text-red-700 text-alert"></p>
                     </div>
                </div>
 
                <div class="flex flex-col mb-4">
-                    <label for="motivo" class="flex content-center items-center">Motivo <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba el motivo del mensaje</p></div></label>
-                    <input required type="text" name="motivo" id="motivo" minlength="5" class=" form-input invalid:text-red-600 " placeholder="Motivo del correo..." title="Escriba el motivo del correo al menos 5 caracteres">
+                    <label for="motivo" class="flex content-center items-center">
+                        Motivo 
+                        <div class="ml-2 relative flex">
+                            <i class="fa-solid fa-circle-info ayuda"></i>
+                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba el motivo del mensaje</p>
+                        </div>
+                    </label>
+                    <input required type="text" name="motivo" oninvalid="showAlert(this,'Introduce un motivo de al menos 5 caracteres de largo')" id="motivo" minlength="5" class=" form-input invalid:text-red-600 " placeholder="Motivo del correo..." title="Escriba el motivo del correo al menos 5 caracteres">
+                    <p id="motivo_error" class="text-xs text-red-700 text-alert"></p>
                 </div>
 
                 <div class="flex flex-col mb-4">
-                    <label for="mensaje" class="flex content-center items-center">Mensaje <div class="flex relative"><i class="relative fa-solid fa-circle-info ayuda"></i><p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba aquí el contenido del mensaje</p></div></label>
-                    <textarea required placeholder="Cual es tu duda?" minlength="10" name="mensaje" id="mensaje" cols="30" rows="10" form="" class="form-textarea invalid:text-red-600"></textarea>
-                <!-- nombre,correo,motivo,mensaje y submit -->
+                    <label for="mensaje" class="flex content-center items-center">
+                        Mensaje 
+                        <div class="relative ml-2">
+                            <i class="fa-solid fa-circle-info ayuda"></i>
+                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba aquí el contenido del mensaje</p>
+                        </div>
+                    </label>
+                    <textarea required placeholder="Cual es tu duda?" minlength="10" oninvalid="showAlert(this,'Campo requerido')" name="mensaje" id="mensaje" cols="30" rows="10" form="" class="form-textarea invalid:text-red-600"></textarea>
+                    <p id="mensaje_error" class="text-xs text-red-700 text-alert"></p>
+                    <!-- nombre,correo,motivo,mensaje y submit -->
                 </div>
 
-                <button type="submit" id="enviar" class="p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+                <button type="submit"  id="enviar" class="p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
             </form>
 
+            <script src="utilities/js/showErrorInput.js"></script>
         </section>
 
     </div>
