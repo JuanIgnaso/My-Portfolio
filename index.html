@@ -275,7 +275,7 @@
         </section>
 
         <!-- FORMULARIO DE CONTACTO -->
-        <section>
+        <section class="mb-8">
             <header class="flex flex-col align-top">
                 <h2 class="text-right text-4xl" id="contactame">Contáctame</h2>
                 <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
@@ -297,7 +297,7 @@
             -->
             <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
             <!-- destino.php post -->
-            <form action="destino.php" method="post" class="flex flex-col">
+            <form action="destino.php" method="post" class="flex flex-col border-t-2 pt-2 border-gray-400">
                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
                     <div class="flex flex-col">
                         <label for="nombre" class="flex content-center items-center">
@@ -355,13 +355,24 @@
             <script src="utilities/js/showErrorInput.js"></script>
         </section>
 
+
+            <!-- FOOTER DE LA WEB -->
+    <footer class="w-full border-t-2 border-portfolioAzul2 p-8">
+        <ol class="text-center flex flex-col gap-2">
+            <li><h3>Gracias por visitar mi Portfolio</h3></li>
+            <li class="text-xs">© 2023 Juan Navarrete. Derechos reservados</li>
+            <li class="text-portfolioAzul2 text-2xl flex justify-center gap-3 mt-6">
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            </li>
+        </ol>
+        
+    </footer>
     </div>
 
 
-    <!-- FOOTER DE LA WEB -->
-    <footer class="w-full bg-red-500">
-        <p class="text-center">Footer de la Web</p>
-    </footer>
+
     
 <script src="utilities/js/toggleDarkMode.js"></script>
 </body>
