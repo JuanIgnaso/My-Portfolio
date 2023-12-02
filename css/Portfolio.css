@@ -48,6 +48,11 @@ input,textarea{
     background-color: var(--color-body) !important;
 }
 
+::selection {
+    color:var(--text-selected-color);
+    background-color:var(--text-background-selected-color);
+  }
+
 #enviar{
     color:white;
     background-color: #113f67;
@@ -203,7 +208,9 @@ input,textarea{
     --color-body:#fff;
     --color-texto:#000;
     --boton-dark-mode:orangered;
-    --color-nota:#113f67;
+    --color-nota:#113f67; 
+    --text-background-selected-color:#113f67;
+    --text-selected-color:#fff;
 }
 
 .dark-mode{
@@ -214,6 +221,8 @@ input,textarea{
     --color-cabeceras-principales:#808ad3;
     --boton-dark-mode: var(--color-texto);
     --color-nota:#a2a8d3;
+    --text-background-selected-color:#e7eaf6;
+    --text-selected-color:#000;
 }
 
 @media screen and (max-width: 360px){

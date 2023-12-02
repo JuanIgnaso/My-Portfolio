@@ -28,12 +28,24 @@ module.exports = {
         web_Load:{
           '0%':{opacity: 0},
           '100%': {opacity: 1},
+        },
+        hoverButton:{
+          '0%':{transform: 'scale(1)'},
+          '100%':{transform: 'scale(1.125)'},
+        },
+        activeButton:{
+          '0%':{transform: 'scale(1.125)',backgroundColor:'#113f67',color:'#fff'},
+          '50%':{transform: 'scale(1)',backgroundColor:'#e7eaf6',color:'#000'},
+          '100%':{transform:'scale(1.125)'}
         }
       },
+
       //Definir comportamiento de animaciones
       animation:{
         web_Load: 'web_Load 2s ease-out',
         showUp: 'web_Load 0.7s ease-out',
+        hoverButton: 'hoverButton 0.5s forwards',
+        activeButton: 'activeButton 0.5s',
       }
     },
     

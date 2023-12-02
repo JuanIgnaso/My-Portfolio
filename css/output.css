@@ -847,6 +847,10 @@ h4 {
   z-index: 20;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .m-\[8px\] {
   margin: 8px;
 }
@@ -891,6 +895,10 @@ h4 {
   margin-left: 0.5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -901,10 +909,6 @@ h4 {
 
 .mt-\[5px\] {
   margin-top: 5px;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .flex {
@@ -949,6 +953,10 @@ h4 {
 
 .w-full {
   width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes web_Load {
@@ -1123,6 +1131,10 @@ h4 {
   font-weight: 400;
 }
 
+.font-thin {
+  font-weight: 100;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1145,11 +1157,6 @@ h4 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
@@ -1220,8 +1227,75 @@ h4 {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
+@keyframes hoverButton {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.125);
+  }
+}
+
+.hover\:animate-hoverButton:hover {
+  animation: hoverButton 0.5s forwards;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover\:animate-spin:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+@keyframes activeButton {
+  0% {
+    transform: scale(1.125);
+    background-color: #113f67;
+    color: #fff;
+  }
+
+  50% {
+    transform: scale(1);
+    background-color: #e7eaf6;
+    color: #000;
+  }
+
+  100% {
+    transform: scale(1.125);
+  }
+}
+
+.active\:animate-activeButton:active {
+  animation: activeButton 0.5s;
 }
 
 @media (min-width: 640px) {
