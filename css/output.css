@@ -1087,6 +1087,10 @@ h4 {
   border-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-t-2 {
   border-top-width: 2px;
 }
@@ -1301,6 +1305,14 @@ h4 {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.last-of-type\:border-b-0:last-of-type {
+  border-bottom-width: 0px;
+}
+
+.last-of-type\:border-none:last-of-type {
+  border-style: none;
 }
 
 .invalid\:text-red-600:invalid {
