@@ -267,12 +267,12 @@
         <!--SECCION: 
         Trabajos realizados
          -->
-         <section>
+         <section class="mb-[25px]">
             <h2 id="proyectos">Proyectos Realizados:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
 
             <!-- Contenedor de proyectos -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative">
 
                 <div class="flip-card">
                     <div class="flip-card-inner">
@@ -284,7 +284,7 @@
                             <li><h3>Juego Piedra Papel Tijeras</h3></li>
                             <li><p>Clásico juego de piedra papel y tijeras hecho con JavaScript</p></li>
                             <li>
-                                <ol class="flex justify-center gap-2 font-bold">
+                                <ol class="flex justify-center gap-2 font-bold lenguajes">
                                     <li>JS</li>
                                     <li>CSS</li>
                                     <li>HTML</li>
@@ -292,9 +292,15 @@
                             </li>
                         </ol>
                         <!-- Opciones -->
-                        <ol class="flex pb-2 justify-center gap-3 absolute bottom-0 left-[30%]">
-                            <li>Ver</li>
-                            <li>Descargar</li>
+                        <ol class="flex justify-center gap-3 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] font-black">
+                            <li class="group">
+                                <a href="">Ver</a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
+                            </li>
+                            <li class="group">
+                                <a href="">Descargar</a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
+                            </li>
                         </ol>
                       </div>
                     </div>
@@ -307,10 +313,10 @@
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
-                            <li><h3>Juego Piedra Papel Tijeras</h3></li>
-                            <li><p>Clásico juego de piedra papel y tijeras hecho con JavaScript</p></li>
+                            <li><h3>Juego Tres En Raya</h3></li>
+                            <li><p>Juego de Tres En Raya creado con CSS y JS</p></li>
                             <li>
-                                <ol class="flex justify-center gap-2 font-bold">
+                                <ol class="flex justify-center gap-2 font-bold lenguajes">
                                     <li>JS</li>
                                     <li>CSS</li>
                                     <li>HTML</li>
@@ -318,9 +324,15 @@
                             </li>
                         </ol>
                         <!-- Opciones -->
-                        <ol class="flex pb-2 justify-center gap-3 absolute bottom-0 left-[30%]">
-                            <li>Ver</li>
-                            <li>Descargar</li>
+                        <ol class="flex justify-center gap-3 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] font-black">
+                            <li class="group">
+                                <a href="">Ver</a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
+                            </li>
+                            <li class="group">
+                                <a href="">Descargar</a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
+                            </li>
                         </ol>
                       </div>
                     </div>
@@ -352,18 +364,28 @@
              required pattern="[a-zA-Z]{3,16}" type="text" name="nombre" id="nombre" class="form-input invalid:text-red-600 " placeholder="Introduce aquí tu nombre..." title="Introduzca un nombre, recuerde, solo letras y espacios"
             -->
             <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
-            <!-- destino.php post -->
-            <form action="destino.php" method="post" class="flex flex-col border-t-2 pt-2 border-gray-400">
-               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
+            
+
+
+            <form action="destino.php" method="post" target="_blank" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400">
+               
+               <!-- Alert card -->
+                <div id="alert" class=" bg-green-500 p-2 text-white font-bold cursor-auto ">
+                    <span class="cursor-pointer closebtn hover:text-black" onclick="this.parentElement.style.display='none';">&times;</span>
+                    Formulario enviado correctamente!
+                </div>
+                <!--  -->
+               
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
                     <div class="flex flex-col">
                         <label for="nombre" class="flex content-center items-center">
                             Nombre 
                             <div class="relative ml-2">
-                                <i class="fa-solid fa-circle-info ayuda text-xs"></i>
+                                <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
                                 <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba su nombre aquí</p>
                             </div>
                         </label>
-                        <input required type="text" name="nombre" oninvalid="showAlert(this,'Introduce un nombre de entre 3 y 16 caracteres, solo letras estan permitidas.')" id="nombre" pattern="[a-zA-Z]{3,16}" class="form-input  invalid:text-red-600 " placeholder="Introduce aquí tu nombre...">
+                        <input required type="text" name="nombre" oninvalid="showAlert(this,'Introduce un nombre de entre 3 y 16 caracteres, solo letras estan permitidas.')" id="nombre" pattern="([a-zA-Zñ](\s[a-zA-Zñ]+)?){3,16}" class="form-input  invalid:text-red-600 " placeholder="Introduce aquí tu nombre...">
                         <p id="nombre_error" class="text-xs text-red-700 text-alert"></p>
                     </div>
                     
@@ -371,7 +393,7 @@
                         <label for="correo"class="flex content-center items-center">
                             Tu correo 
                             <div class="relative ml-2">
-                                <i class="fa-solid fa-circle-info ayuda text-xs"></i>
+                                <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
                                 <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce un correo que sea válido</p>
                             </div>
                         </label>
@@ -384,7 +406,7 @@
                     <label for="motivo" class="flex content-center items-center">
                         Motivo 
                         <div class="ml-2 relative flex">
-                            <i class="fa-solid fa-circle-info ayuda text-xs"></i>
+                            <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
                             <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba el motivo del mensaje</p>
                         </div>
                     </label>
@@ -396,7 +418,7 @@
                     <label for="mensaje" class="flex content-center items-center">
                         Mensaje 
                         <div class="relative ml-2">
-                            <i class="fa-solid fa-circle-info ayuda text-xs"></i>
+                            <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
                             <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba aquí el contenido del mensaje</p>
                         </div>
                     </label>
@@ -407,7 +429,11 @@
 
                 <button type="submit"  id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
             </form>
-
+            <script>
+                //Mostrar Mensaje Alerta
+                let notification = document.querySelector('#alert');
+                function messajeSuccess(){notification.style.display = 'block';};               
+            </script>
             <script src="utilities/js/showErrorInput.js"></script>
         </section>
 

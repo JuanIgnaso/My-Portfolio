@@ -157,7 +157,6 @@ input,textarea{
     /* width: 300px;
     height: 300px; */
     aspect-ratio: 1/1; /*Para hacer que siempre tenga el mismo h y w*/
-    border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -197,10 +196,16 @@ input,textarea{
     position: relative;
     flex-direction: column;
     justify-content: center;
-    background-color: dodgerblue;
-    color: white;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     transform: rotateY(180deg);
   }
+
+  .flip-card-back .lenguajes{
+    color:#0f172a;
+  }
+
+
 
   .flip-card-front img{
     object-fit: cover;
@@ -208,6 +213,11 @@ input,textarea{
     width: 100%;
   }
 
+
+
+#alert{
+    display:none;
+}
 
 /* CONTENIDO DEL MENÚ LATERAL */
 

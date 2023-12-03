@@ -19,6 +19,7 @@ module.exports = {
         'portfolioAzul2': '#a2a8d3', 
         'portfolioAzul3' : '#38598b',
         'portfolioAzul4' : '#113f67',
+        'portfolioAzul5' : '#0f172a',
         'nivelBasico': 'text-blue-600'
 
         //Otros colores
@@ -37,6 +38,10 @@ module.exports = {
           '0%':{transform: 'scale(1.125)',backgroundColor:'#113f67',color:'#fff'},
           '50%':{transform: 'scale(1)',backgroundColor:'#e7eaf6',color:'#000'},
           '100%':{transform:'scale(1.125)'}
+        },
+        expand:{
+          '0%':{width:'0%',opacity:'0'},
+          '100%':{width:'100%',opacity:'1'},
         }
       },
 
@@ -46,6 +51,7 @@ module.exports = {
         showUp: 'web_Load 0.7s ease-out',
         hoverButton: 'hoverButton 0.5s forwards',
         activeButton: 'activeButton 0.5s',
+        expand: 'expand 0.5s forwards',
       }
     },
     
