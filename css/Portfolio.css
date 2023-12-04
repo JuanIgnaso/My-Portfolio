@@ -214,10 +214,20 @@ input,textarea{
   }
 
 
+/* .experiencia_container{
+    border-bottom: lightslategrey 2px solid;
+} */
+
+/* .experiencia_container:last-of-type{
+    border-bottom:none;
+} */
+
 
 #alert{
     display:none;
 }
+
+
 
 /* CONTENIDO DEL MENÚ LATERAL */
 

@@ -20,7 +20,9 @@ module.exports = {
         'portfolioAzul3' : '#38598b',
         'portfolioAzul4' : '#113f67',
         'portfolioAzul5' : '#0f172a',
-        'nivelBasico': 'text-blue-600'
+        'nivelBasico': 'text-blue-600',
+        'correcto' : '#32cd32',
+        'incorrecto' : '#ff0000'
 
         //Otros colores
       },

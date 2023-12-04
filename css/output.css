@@ -807,6 +807,14 @@ h4 {
   padding-bottom: 0;
 }
 
+.incorrecto{
+  background-color: #ff0000;
+}
+
+.correcto{
+  background-color: #32cd32;
+}
+
 .fixed {
   position: fixed;
 }
@@ -867,6 +875,10 @@ h4 {
   margin: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -879,20 +891,12 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
 
 .mb-\[15px\] {
   margin-bottom: 15px;
-}
-
-.mb-\[25px\] {
-  margin-bottom: 25px;
 }
 
 .mb-\[5px\] {
@@ -921,14 +925,6 @@ h4 {
 
 .mt-\[20px\] {
   margin-top: 20px;
-}
-
-.mt-\[5px\] {
-  margin-top: 5px;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -1124,9 +1120,9 @@ h4 {
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
 }
 
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+.border-b-gray-200 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .bg-portfolioAzul3 {
@@ -1309,10 +1305,6 @@ h4 {
 
 .last-of-type\:border-b-0:last-of-type {
   border-bottom-width: 0px;
-}
-
-.last-of-type\:border-none:last-of-type {
-  border-style: none;
 }
 
 .invalid\:text-red-600:invalid {

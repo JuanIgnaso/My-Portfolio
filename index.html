@@ -45,10 +45,10 @@
         <!-- SECCION:
         Sobre Mí
         -->
-        <section class="mb-[25px]">
+        <section class="mb-10">
             <h2 id="sobreMi">Sobre Mí:</h2>
             <!-- Section divider -->
-            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
             <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
             <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
         </section>
@@ -57,10 +57,10 @@
         <!-- SECCION:
         Mis Habilidades
         -->
-        <section class="mb-[25px]">
+        <section class="mb-10">
             <header class="mb-[10px]">
                 <h2 id="habilidades">Mis Habilidades:</h2>
-                <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+                <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
                 <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
             </header>
             <article>
@@ -190,7 +190,7 @@
             <!-- OTRAS HABILIDADES -->
             <article class="text-right">
                 <h3>Otras Habilidades</h3>
-                <div class="border-[1px] border-gray-300 mt-[5px] mb-[10px]"></div>
+                <div class="border-[1px] border-gray-300 mt-3 mb-3"></div>
                 <p class="mb-[8px]">Además de tener conocimentos en los entornos anteriormente mencionados también...</p>
                 <ol id="otras_habilidades" class="font-bold">
                     <li>Siempre puntual<i class="fa-solid fa-circle-notch text-xs ml-2"></i></li>
@@ -219,9 +219,9 @@
         <!-- 
         Certificaciones
         -->
-        <section>
+        <section class="mb-10">
             <h2 id="estudios">Mis Estudios:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
             <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
             <!-- Centro,titulo,inicio y fin y nota
              grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
@@ -256,28 +256,30 @@
         Experiencia Laboral
         -->
 
-        <section>
+        <section class="mb-10">
             <h2 id="experiencia">Mi Experiencia Laboral:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
-            <div class="border-b-2 border-gray-300">
+            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
+            <div class="experiencia_container border-b-gray-200 border-b-2 ">
                 <h3>Titulo de ejemplo</h3>
                 <p>texto de ejemplo</p>
             </div>
-            <div class="border-b-2 border-gray-300 ">
+            <div class="experiencia_container border-b-gray-200 border-b-2">
                 <h3>Titulo de ejemplo</h3>
                 <p>texto de ejemplo</p>
             </div>
-            <div class="border-b-2 border-gray-300 ">
+
+            <div class="experiencia_container border-b-gray-200 border-b-2 last-of-type:border-b-0">
                 <h3>Titulo de ejemplo</h3>
                 <p>texto de ejemplo</p>
             </div>
+            
         </section>
 
 
         <!--SECCION: 
         Trabajos realizados
          -->
-         <section class="mb-[25px]">
+         <section class="mb-10">
             <h2 id="proyectos">Proyectos Realizados:</h2>
             <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
 
@@ -355,10 +357,10 @@
         </section>
 
         <!-- FORMULARIO DE CONTACTO -->
-        <section class="mb-8">
+        <section class="mb-10">
             <header class="flex flex-col align-top">
                 <h2 class="text-right text-4xl" id="contactame">Contáctame</h2>
-                <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-[5px] mb-[5px]"></div>
+                <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-3 mb-3"></div>
             </header>
             
             <div class="flex flex-col">
@@ -379,12 +381,12 @@
             
 
 
-            <form action="destino.php" method="post" target="_blank" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400">
+            <form action="destino.php" method="post" target="_blank" oninvalid="algomal()" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400" id="formulario_mensaje">
                
                <!-- Alert card -->
-                <div id="alert" class=" bg-green-500 p-2 text-white font-bold cursor-auto ">
+                <div id="alert" class=" p-2 text-white font-bold cursor-auto">
                     <span class="cursor-pointer closebtn hover:text-black" onclick="this.parentElement.style.display='none';">&times;</span>
-                    Formulario enviado correctamente!
+                    <span id="card_message"></span>
                 </div>
                 <!--  -->
                
@@ -439,14 +441,9 @@
                     <!-- nombre,correo,motivo,mensaje y submit -->
                 </div>
 
-                <button type="submit"  id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+                <button type="submit" onclick="messageFailure()" id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
             </form>
-            <script>
-                //Mostrar Mensaje Alerta
-                let notification = document.querySelector('#alert');
-                function messajeSuccess(){notification.style.display = 'block';};               
-            </script>
-            <script src="utilities/js/showErrorInput.js"></script>
+            <script src="utilities/js/showFormActions.js"></script>
         </section>
 
 

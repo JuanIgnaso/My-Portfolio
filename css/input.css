@@ -18,3 +18,13 @@
 
   
 }
+
+@layer components{
+  .incorrecto{
+    background-color: theme('colors.incorrecto');
+  }
+
+  .correcto{
+    background-color: theme('colors.correcto');
+  }
+}
