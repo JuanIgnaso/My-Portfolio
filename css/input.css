@@ -20,12 +20,23 @@
 }
 
 @layer components{
-  .incorrecto{
-    background-color: theme('colors.incorrecto');
+  .error{
+    background-color: theme('colors.error');
   }
 
-  .correcto{
-    background-color: theme('colors.correcto');
+  .success{
+    background-color: theme('colors.success');
+  }
+
+  .warning{
+    background-color: theme('colors.warning'); 
+  }
+
+  .sectionDivider{
+    border-width: 2px;
+    border-color: theme('colors.portfolioAzul2');
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .headerSection{

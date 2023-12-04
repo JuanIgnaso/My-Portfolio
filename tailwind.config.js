@@ -21,8 +21,9 @@ module.exports = {
         'portfolioAzul4' : '#113f67',
         'portfolioAzul5' : '#0f172a',
         'nivelBasico': 'text-blue-600',
-        'correcto' : '#32cd32',
-        'incorrecto' : '#ff0000'
+        'success' : '#32cd32',
+        'warning' : '#facc15',
+        'error' : '#ff0000'
 
         //Otros colores
       },
@@ -44,7 +45,15 @@ module.exports = {
         expand:{
           '0%':{width:'0%',opacity:'0'},
           '100%':{width:'100%',opacity:'1'},
-        }
+        },
+        fadingInLeft:{
+          'from':{right:'200px'},
+          'to':{right:'0px'}
+        },
+        // fadingInRight:{
+        //   '0%':{},
+        //   '100%':{}
+        // },
       },
 
       //Definir comportamiento de animaciones
@@ -54,6 +63,7 @@ module.exports = {
         hoverButton: 'hoverButton 0.5s forwards',
         activeButton: 'activeButton 0.5s',
         expand: 'expand 0.5s forwards',
+        fadingInLeft: 'fadingInLeft 1s ease-out',
       }
     },
     

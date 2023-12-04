@@ -17,7 +17,7 @@
     //Mostrar Alerta de formulario Correcto.
     function messajeSuccess(){
         notificacion.style.display = 'block';
-        showUpCard('correcto p-2 text-white font-bold cursor-auto','Formulario enviado correctamente!');
+        showUpCard('success p-2 text-white font-bold cursor-auto','Formulario enviado correctamente!');
         (document.querySelectorAll('#formulario_mensaje p[id*="_error"]')).forEach(element => {
            element.innerHTML = ''; 
         });
@@ -28,7 +28,7 @@
     function messageFailure(){
         if(document.querySelectorAll('#formulario_mensaje input:invalid').length != 0){
             notificacion.style.display = 'block';
-            showUpCard('incorrecto p-2 text-white font-bold cursor-auto','Algun/os campo/s esta/n incorrecto/s, revisa el formulario.');
+            showUpCard('error p-2 text-white font-bold cursor-auto','Algun/os campo/s esta/n incorrecto/s, revisa el formulario.');
         }
         
     }

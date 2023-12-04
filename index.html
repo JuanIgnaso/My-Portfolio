@@ -48,7 +48,7 @@
         <section class="mb-10">
             <h2 id="sobreMi" class="headerSection">Sobre Mí:</h2>
             <!-- Section divider -->
-            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
+            <div class="sectionDivider"></div>
             <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
             <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
         </section>
@@ -60,7 +60,7 @@
         <section class="mb-10">
             <header class="mb-[10px]">
                 <h2 id="habilidades" class="headerSection">Mis Habilidades:</h2>
-                <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
+                <div class="sectionDivider"></div>
                 <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
             </header>
             <article>
@@ -190,7 +190,7 @@
             <!-- OTRAS HABILIDADES -->
             <article class="text-right">
                 <h3>Otras Habilidades</h3>
-                <div class="border-[1px] border-gray-300 mt-3 mb-3"></div>
+                <div class="border-[1px] border-gray-300 mt-4 mb-4"></div>
                 <p class="mb-[8px]">Además de tener conocimentos en los entornos anteriormente mencionados también...</p>
                 <ol id="otras_habilidades" class="font-bold">
                     <li>Siempre puntual<i class="fa-solid fa-circle-notch text-xs ml-2"></i></li>
@@ -205,15 +205,7 @@
                     </li>
                 </ol>
             </article>
-            <!-- 
-                Para uso de :before y :after
-                before/after:content-[contenido]
-
-                Para meter estilos usamos el selector:'propiedad'
-                after:absolute...o after:text-red-600....
-
-             -->
-            
+     
             <script src="utilities/js/defineLvlColor.js"></script>
         </section>
         <!-- 
@@ -221,7 +213,7 @@
         -->
         <section class="mb-10">
             <h2 id="estudios" class="headerSection">Mis Estudios:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
+            <div class="sectionDivider"></div>
             <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
             <!-- Centro,titulo,inicio y fin y nota
              grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
@@ -258,20 +250,21 @@
 
         <section class="mb-10">
             <h2 id="experiencia" class="headerSection">Mi Experiencia Laboral:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
-            <div class="experiencia_container flex flex-col">
-
-                <ol class="w-1/2 text-center p-3 self-start">
-                    <li><h3 class="text-3xl"><span>&#9866;</span>I3TE Porriño</h3></li>
-                    <li><h4>3 meses como Ayudante en Prácticas</h4></li>
+            <div class="sectionDivider animate-fadingInLeft"></div>
+            <div class="experiencia_container relative flex flex-col gap-3">
+                
+                <ol class="relative exp-left animate-fadingInLeft border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
+                    <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>I3TE Porriño</h3></li>
+                    <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
                             <h4 class="underline">Mi rol</h4>
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
                 </ol>
-                <ol class="w-1/2 text-center p-3 self-end">
-                    <li><h3 class="text-3xl"><span>&#9866;</span>Software Quobis Porriño</h3></li>
-                    <li><h4>3 meses como Ayudante en Prácticas</h4></li>
+
+                <ol class="relative exp-right border-dotted border-2 border-portfolioAzul2  w-full md:w-1/2 text-center p-3 self-center md:self-end">
+                    <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>Software Quobis Porriño</h3></li>
+                    <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
                             <h4 class="underline">Mi rol</h4>
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
@@ -288,7 +281,7 @@
          -->
          <section class="mb-10">
             <h2 id="proyectos" class="headerSection">Proyectos Realizados:</h2>
-            <div class="border-2 border-portfolioAzul2 mt-3 mb-3"></div>
+            <div class="sectionDivider"></div>
 
             <!-- Contenedor de proyectos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative">

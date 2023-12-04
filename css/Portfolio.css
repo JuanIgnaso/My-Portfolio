@@ -271,8 +271,36 @@ input,textarea{
     font-size: clamp(5.25em,4vw,6em);
 }
 
+.experiencia_header{
+    color:var(--color-cabecera-experiencia);
+}
+
+.tiempo_experiencia{
+    color:var(--experiencia);
+}
+
 #otras_habilidades i{
     color: var(--color-items-lista);
+}
+
+.exp-left{
+    animation: fadeInLeft 1s ease-out;
+}
+
+.exp-right{
+    animation: fadeInRight 1s ease-out;
+}
+
+
+
+@keyframes fadeInLeft {
+  from {right:50%;}
+  to {right:0%}
+}
+
+@keyframes fadeInRight{
+    from {left:50%}
+    to {left: 0%}
 }
 
 
@@ -287,6 +315,8 @@ input,textarea{
     --color-nota:#113f67; 
     --text-background-selected-color:#113f67;
     --text-selected-color:#fff;
+    --color-cabecera-experiencia:#4c1d95;
+    --experiencia:#38598b;
 }
 
 .dark-mode{
@@ -299,6 +329,8 @@ input,textarea{
     --color-nota:#a2a8d3;
     --text-background-selected-color:#e7eaf6;
     --text-selected-color:#000;
+    --color-cabecera-experiencia:#c084fc;
+    --experiencia:#e7eaf6;
 }
 
 @media screen and (max-width: 360px){
