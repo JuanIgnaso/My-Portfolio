@@ -27,4 +27,8 @@
   .correcto{
     background-color: theme('colors.correcto');
   }
+
+  .headerSection{
+    @apply text-4xl;
+  }
 }

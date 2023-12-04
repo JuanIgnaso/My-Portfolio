@@ -815,6 +815,11 @@ h4 {
   background-color: #32cd32;
 }
 
+.headerSection {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .fixed {
   position: fixed;
 }
@@ -857,6 +862,26 @@ h4 {
 
 .top-\[10px\] {
   top: 10px;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .z-10 {
@@ -925,6 +950,10 @@ h4 {
 
 .mt-\[20px\] {
   margin-top: 20px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -1130,6 +1159,11 @@ h4 {
   background-color: rgb(56 89 139 / var(--tw-bg-opacity));
 }
 
+.bg-portfolioAzul1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 234 246 / var(--tw-bg-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1144,6 +1178,10 @@ h4 {
 
 .p-\[5px\] {
   padding: 5px;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .pr-\[5px\] {
@@ -1178,11 +1216,6 @@ h4 {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-xl {
@@ -1234,6 +1267,10 @@ h4 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -1289,6 +1326,16 @@ h4 {
 
 .before\:content-\[\'Nota\'\]::before {
   --tw-content: 'Nota';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\*\]::before {
+  --tw-content: *;
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'\&\#9866\;\'\]::before {
+  --tw-content: '&#9866;';
   content: var(--tw-content);
 }
 
