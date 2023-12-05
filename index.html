@@ -9,6 +9,12 @@
     <!-- ICONOS -->
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="/fontawesome/css/all.css">
+
+    <!-- JQUERY -->
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
     
     <title>Mi Portfolio</title>
 </head>
@@ -63,7 +69,8 @@
                 <div class="sectionDivider"></div>
                 <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
             </header>
-            <article>
+            
+            <article class="section_content">
                 <h3 class="mb-[10px]">Lenguajes</h3>
                 <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
 
@@ -140,7 +147,7 @@
                 </ol>
             </article>               
               
-            <article>
+            <article class="section_content">
                 <h3 class="mb-[10px]">Frameworks</h3>
                 <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
                     <li class="border-4 border-cyan-800 habilidades-container">
@@ -192,7 +199,7 @@
                 <h3>Otras Habilidades</h3>
                 <div class="border-[1px] border-gray-300 mt-4 mb-4"></div>
                 <p class="mb-[8px]">Además de tener conocimentos en los entornos anteriormente mencionados también...</p>
-                <ol id="otras_habilidades" class="font-bold">
+                <ol id="otras_habilidades" class="font-bold section_content">
                     <li>Siempre puntual<i class="fa-solid fa-circle-notch text-xs ml-2"></i></li>
                     <li>Abierto a trabajar en equipo<i class="fa-solid fa-circle-notch text-xs ml-2"></i></li>
                     <li>Dedicado con el trabajo<i class="fa-solid fa-circle-notch text-xs ml-2 "></i></li>
@@ -205,7 +212,7 @@
                     </li>
                 </ol>
             </article>
-     
+        
             <script src="utilities/js/defineLvlColor.js"></script>
         </section>
         <!-- 
@@ -214,33 +221,37 @@
         <section class="mb-10">
             <h2 id="estudios" class="headerSection">Mis Estudios:</h2>
             <div class="sectionDivider"></div>
-            <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
+
+            <div class="section_content">
+                <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
             <!-- Centro,titulo,inicio y fin y nota
              grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
             -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-[15px]">
-                <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
-                    <div>
-                        <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
-                            <li><h3>Tec Medio - Sistemas Microinformáticos y Redes</h3></li>
-                            <li><p><strong>IES Pazo da Mercé</strong> 2019/2021</p></li>
-                        </ol>
-                    </div>
-                    <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">6,4</span>
-                </article>
-                
-                <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
-                    <div>
-                        <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
-                            <li><h3>Tec Sup - Diseño de Aplicaciones Web</h3></li>
-                            <li><p><strong>IES Pazo da Mercé</strong> 2021/2023</p></li>
-                        </ol>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-[15px]">
+                    <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
+                        <div>
+                            <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
+                                <li><h3>Tec Medio - Sistemas Microinformáticos y Redes</h3></li>
+                                <li><p><strong>IES Pazo da Mercé</strong> 2019/2021</p></li>
+                            </ol>
+                        </div>
+                        <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">6,4</span>
+                    </article>
+                    
+                    <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
+                        <div>
+                            <ol class="h-full flex flex-col justify-between w-[80%] lg:w-[90%]">
+                                <li><h3>Tec Sup - Diseño de Aplicaciones Web</h3></li>
+                                <li><p><strong>IES Pazo da Mercé</strong> 2021/2023</p></li>
+                            </ol>
 
-                    </div>
-                    <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">7,9</span>
-                </article>
+                        </div>
+                        <span class="relative text-portfolioAzul4 text-2xl md:text-4xl font-bold  before:content-['Nota'] before:absolute before:top-0 before:right-[80%] before:font-bold before:text-red-500 before:text-xs before:md:text-sm">7,9</span>
+                    </article>
 
+                </div>
             </div>
+            
             
         </section>
 
@@ -252,8 +263,8 @@
             <h2 id="experiencia" class="headerSection">Mi Experiencia Laboral:</h2>
             <div class="sectionDivider animate-fadingInLeft"></div>
             <div class="experiencia_container relative flex flex-col gap-3">
-                
-                <ol class="relative exp-left animate-fadingInLeft border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
+                <!-- exp-left -->
+                <ol class="relative right-1/2 opacity-0 animate-fadingInLeft border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>I3TE Porriño</h3></li>
                     <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
@@ -261,8 +272,8 @@
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
                 </ol>
-
-                <ol class="relative exp-right border-dotted border-2 border-portfolioAzul2  w-full md:w-1/2 text-center p-3 self-center md:self-end">
+                <!-- exp-right -->
+                <ol class="relative  left-1/2 opacity-0 border-dotted border-2 border-portfolioAzul2  w-full md:w-1/2 text-center p-3 self-center md:self-end">
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>Software Quobis Porriño</h3></li>
                     <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
@@ -270,8 +281,81 @@
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
                 </ol>
+
             </div>
 
+            <!-- clases de los elementos exp-left exp-right -->
+            <script>
+                //Mostrar animación cuando elemento es visible
+                /*-----------------------------------------------------*/
+                /*
+                Se le añade la clase que contiene la animación cuando el elemento aparece
+                en pantalla, tanto la animación como la clase tienen que estar definidas 
+                en el archivo CSS.
+                */
+
+
+                /*elemento*/
+                // let elemento = document.querySelector('.experiencia_container ol:first-of-type');
+                // let elementHeight = elemento.clientHeight;
+
+                //Añade evento al scroll y llamar a la función de animar
+                document.addEventListener('scroll',animate);
+
+
+
+
+                //Comprobar si el elemento aparece en pantalla
+                function inView(element){
+
+                    let elementHeight = element.clientHeight;
+
+                    //Alto de la ventana
+                    let windowHeight = window.innerHeight;
+
+                    //Numero de píxeles que se han hecho scroll
+                    let scrollY = window.scrollY || window.pageYOffset;
+
+                    //Posición actual del scroll
+                    let scrollPosition = scrollY + windowHeight;
+
+                    //Posición vertical del elemento
+                    let elementPosition = element.getBoundingClientRect().top +
+                    scrollY + elementHeight;
+
+                    //Retornar si la posición del scroll es mayor a la del objeto
+                    //(significaría que el objeto se está mostrando en pantalla)
+                    return scrollPosition >= elementPosition;
+
+                }
+
+                //Animar elemento si aparece en pantalla
+                function animate(){
+
+                    /*
+                    Todo elemento que quieras que se anime tiene que llamar a la función 'inView'
+                    */
+                    //Cartas de Experiencia Laboral
+                    let animation = 'exp-right';
+
+                    let expElements = document.querySelectorAll('.experiencia_container ol');
+                    expElements.forEach(element => {
+                        animation == 'exp-right' ? animation = 'exp-left' : animation = 'exp-right'; 
+                        if(inView(element)){
+                            element.classList.add(animation);
+                        }
+                    });
+
+                    //Secciones de la Web
+                    document.querySelectorAll('.section_content').forEach(element => {
+                        if(inView(element)){
+                            element.classList.add('load_content');
+                        }
+                    })
+
+                }
+
+            </script>
             
         </section>
 
@@ -284,9 +368,9 @@
             <div class="sectionDivider"></div>
 
             <!-- Contenedor de proyectos -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative section_content">
 
-                <div class="flip-card">
+                <div class="flip-card section-content">
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
@@ -365,7 +449,7 @@
             
             <div class="flex flex-col">
                 <h3 class="text-right text-2xl mt-3">Mis Contactos</h3>
-                <div class="flex flex-row-reverse">
+                <div class="flex flex-row-reverse section_content">
                     <ol id="mis_contactos_list" class="text-right text-xl">
                         <li class="flex gap-2 items-center justify-end">Linkedin <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a></li>
                         <li class="flex gap-2 items-center justify-end">+34 999 999 999<i class="fa-solid fa-phone  text-portfolioAzul4"></i></li>
@@ -374,13 +458,9 @@
                 </div>
                 
             </div>
-            <!-- FORMULARIO 
-             required pattern="[a-zA-Z]{3,16}" type="text" name="nombre" id="nombre" class="form-input invalid:text-red-600 " placeholder="Introduce aquí tu nombre..." title="Introduzca un nombre, recuerde, solo letras y espacios"
-            -->
             <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
             
-
-
+            <!-- FORMULARIO DE LA WEB ***************************************-->
             <form action="destino.php" method="post" target="_blank" oninvalid="algomal()" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400" id="formulario_mensaje">
                
                <!-- Alert card -->
@@ -390,7 +470,7 @@
                 </div>
                 <!--  -->
                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4 section_content">
                     <div class="flex flex-col">
                         <label for="nombre" class="flex content-center items-center">
                             Nombre 
@@ -416,7 +496,7 @@
                     </div>
                </div>
 
-               <div class="flex flex-col mb-4">
+               <div class="flex flex-col mb-4 section_content">
                     <label for="motivo" class="flex content-center items-center">
                         Motivo 
                         <div class="ml-2 relative flex">
@@ -428,7 +508,7 @@
                     <p id="motivo_error" class="text-xs text-red-700 text-alert"></p>
                 </div>
 
-                <div class="flex flex-col mb-4">
+                <div class="flex flex-col mb-4 section_content">
                     <label for="mensaje" class="flex content-center items-center">
                         Mensaje 
                         <div class="relative ml-2">
@@ -438,7 +518,6 @@
                     </label>
                     <textarea required placeholder="Cual es tu duda?" minlength="10" oninvalid="showAlert(this,'Campo requerido')" name="mensaje" id="mensaje" cols="30" rows="10" form="" class="form-textarea invalid:text-red-600"></textarea>
                     <p id="mensaje_error" class="text-xs text-red-700 text-alert"></p>
-                    <!-- nombre,correo,motivo,mensaje y submit -->
                 </div>
 
                 <button type="submit" onclick="messageFailure()" id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>

@@ -284,23 +284,34 @@ input,textarea{
 }
 
 .exp-left{
-    animation: fadeInLeft 1s ease-out;
+    animation: fadeInLeft 1s ease-out forwards;
 }
 
 .exp-right{
-    animation: fadeInRight 1s ease-out;
+    animation: fadeInRight 1s ease-out forwards;
 }
 
+.load_content{
+    animation: fadeIn 1s ease-out forwards;
+}
 
+.section_content{
+    opacity: 0;
+}
 
 @keyframes fadeInLeft {
-  from {right:50%;}
-  to {right:0%}
+  from {right:50%;opacity: 0;}
+  to {right:0%;opacity: 1;}
 }
 
 @keyframes fadeInRight{
-    from {left:50%}
-    to {left: 0%}
+    from {left:50%;opacity: 0;}
+    to {left: 0%;opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 1;}
 }
 
 
