@@ -19,7 +19,21 @@
     <title>Mi Portfolio</title>
 </head>
 <body class="animate-web_Load">
-    <button id="darkmode-btn" class="fixed z-10 w-[40px] h-[40px] top-[10px] left-[10px]"><i class="fa-regular fa-sun text-xl"></i></button>
+
+    <!-- BOTÓN DE DARKMODE -->
+    <div class="top-[10px] left-[10px] fixed z-10 flex flex-col md:flex-row align-center gap-2">
+        <button id="darkmode-btn" class="w-[40px] h-[40px]"><i class="fa-regular fa-sun text-xl"></i></button>
+        <button id="disable_light" class="group relative flex">
+            <i class="fa-regular fa-lightbulb"></i><span class="hidden group-hover:inline" id="enable_light"> Deshabilitar</span>
+        </button>
+    </div>
+    <!--  -->
+
+    <div class="custom-cursor"></div>
+
+    <script src="utilities/js/disableEnableLight.js"></script>
+
+
     <h4 class="text-center md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
 
     <!-- MENÚ DE INICIO -->
@@ -262,7 +276,7 @@
         <section class="mb-10">
             <h2 id="experiencia" class="headerSection">Mi Experiencia Laboral:</h2>
             <div class="sectionDivider animate-fadingInLeft"></div>
-            <div class="experiencia_container relative flex flex-col gap-3">
+            <div class="experiencia_container relative flex flex-col gap-3 overflow-hidden">
                 <!-- exp-left -->
                 <ol class="relative right-1/2 opacity-0 animate-fadingInLeft border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>I3TE Porriño</h3></li>
@@ -283,45 +297,10 @@
                 </ol> 
 
             </div>
-            <div class="custom-cursor"></div>
-            <button type="button" class="bg-slate-500 text-white" id="disable_light">Toggle light off</button>
+           
             <!-- clases de los elementos exp-left exp-right -->
             <script src="utilities/js/loadElementsInDocument.js"></script>
-            <script>
-                //Flag para habilitar o deshabilitar
-                let isEnabled = true;
-
-               
-
-                enableLight = () => $(document).mousemove(function(e){
-                    $(".custom-cursor").css({
-                    left:e.pageX, 
-                    top:e.pageY,
-                    display:'block'
-                    });
-                });
-
-                
-
-                $("#disable_light").click(function(){
-                if(isEnabled){
-                    $(document).off("mousemove");
-                    $(".custom-cursor").css({
-                        display:'none'
-                    })
-                    isEnabled = false;
-                }else{
-                   enableLight();
-                   isEnabled = true; 
-                }
-                
-                });
-                //Deshabilitar
-                //$(document).off('mousemove');
-
-                $(document).load(enableLight());
-                
-            </script>
+            
         </section>
 
 

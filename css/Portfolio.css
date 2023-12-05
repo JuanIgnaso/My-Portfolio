@@ -300,13 +300,15 @@ input,textarea{
 }
 
 @keyframes fadeInLeft {
-  from {right:50%;opacity: 0;}
-  to {right:0%;opacity: 1;}
+  0% {right:25%;opacity: 0;}
+  70%{opacity: 0.2;}
+  100% {right:0%;opacity: 1;}
 }
 
 @keyframes fadeInRight{
-    from {left:50%;opacity: 0;}
-    to {left: 0%;opacity: 1;}
+    0% {left:25%;opacity: 0;}
+    70%{opacity: 0.2;}
+    100% {left: 0%;opacity: 1;}
 }
 
 @keyframes fadeIn {
@@ -317,12 +319,12 @@ input,textarea{
 
 .custom-cursor{
     position: absolute;
-    cursor:none;
-    pointer-events: none;
+    pointer-events:none; 
     transform:translate(-50%,-50%);
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    z-index: 30;
     
     /* radial-gradient(circle, rgba(246,232,13,1) 0%,  rgba(255,255,255,0) 70%); */
     background: radial-gradient(circle,var(--color-cursor) 0%,rgba(255,255,255,0) 70%);

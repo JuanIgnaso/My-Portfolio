@@ -5,13 +5,22 @@ let icon = document.querySelector('#darkmode-btn i');
 
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
+//Icono bombilla
+let luz = document.querySelector('#disable_light');
+
 //Botón para cambiar entre modo oscuro y claro
 let darkmode = document.querySelector('#darkmode-btn');
 
 function toggleDarkMode(state){
     document.documentElement.classList.toggle("dark-mode", state);
     darkModeState = state;
-    state ? icon.setAttribute('class','fa-regular fa-moon text-xl') : icon.setAttribute('class','fa-regular fa-sun text-xl')
+    if(state){
+        icon.setAttribute('class','fa-regular fa-moon text-xl');
+        luz.style.display = 'block';
+    }else{
+        icon.setAttribute('class','fa-regular fa-sun text-xl');
+        luz.style.display = 'none';
+    }
 }
 
 // Sets localStorage state
