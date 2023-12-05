@@ -315,6 +315,20 @@ input,textarea{
 }
 
 
+.custom-cursor{
+    position: absolute;
+    cursor:none;
+    pointer-events: none;
+    transform:translate(-50%,-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+    /* radial-gradient(circle, rgba(246,232,13,1) 0%,  rgba(255,255,255,0) 70%); */
+    background: radial-gradient(circle,var(--color-cursor) 0%,rgba(255,255,255,0) 70%);
+}
+
+
 :root{
     --color-cabeceras-principales:#113f67;
     --color-items-lista: #12548d;
@@ -328,6 +342,7 @@ input,textarea{
     --text-selected-color:#fff;
     --color-cabecera-experiencia:#4c1d95;
     --experiencia:#38598b;
+    --color-cursor:none;
 }
 
 .dark-mode{
@@ -342,6 +357,7 @@ input,textarea{
     --text-selected-color:#000;
     --color-cabecera-experiencia:#c084fc;
     --experiencia:#e7eaf6;
+    --color-cursor:rgba(255,255,255,0.7);
 }
 
 @media screen and (max-width: 360px){

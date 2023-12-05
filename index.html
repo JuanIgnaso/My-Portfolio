@@ -280,13 +280,48 @@
                             <h4 class="underline">Mi rol</h4>
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
-                </ol>
+                </ol> 
 
             </div>
-
+            <div class="custom-cursor"></div>
+            <button type="button" class="bg-slate-500 text-white" id="disable_light">Toggle light off</button>
             <!-- clases de los elementos exp-left exp-right -->
             <script src="utilities/js/loadElementsInDocument.js"></script>
-            
+            <script>
+                //Flag para habilitar o deshabilitar
+                let isEnabled = true;
+
+               
+
+                enableLight = () => $(document).mousemove(function(e){
+                    $(".custom-cursor").css({
+                    left:e.pageX, 
+                    top:e.pageY,
+                    display:'block'
+                    });
+                });
+
+                
+
+                $("#disable_light").click(function(){
+                if(isEnabled){
+                    $(document).off("mousemove");
+                    $(".custom-cursor").css({
+                        display:'none'
+                    })
+                    isEnabled = false;
+                }else{
+                   enableLight();
+                   isEnabled = true; 
+                }
+                
+                });
+                //Deshabilitar
+                //$(document).off('mousemove');
+
+                $(document).load(enableLight());
+                
+            </script>
         </section>
 
 
