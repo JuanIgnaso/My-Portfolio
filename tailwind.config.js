@@ -46,14 +46,11 @@ module.exports = {
           '0%':{width:'0%',opacity:'0'},
           '100%':{width:'100%',opacity:'1'},
         },
-        fadingInLeft:{
-          'from':{right:'200px'},
-          'to':{right:'0px'}
-        },
-        // fadingInRight:{
-        //   '0%':{},
-        //   '100%':{}
-        // },
+        showHelp:{
+          '0%':{opacity:'0'},
+          '100%':{opacity: '1'},
+        }
+        
       },
 
       //Definir comportamiento de animaciones
@@ -63,7 +60,7 @@ module.exports = {
         hoverButton: 'hoverButton 0.5s forwards',
         activeButton: 'activeButton 0.5s',
         expand: 'expand 0.5s forwards',
-        fadingInLeft: 'fadingInLeft 1s ease-out',
+        showHelp: 'showHelp 0.7s forwards',
       }
     },
     

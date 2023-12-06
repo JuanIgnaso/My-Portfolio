@@ -632,21 +632,29 @@ select {
 h1 {
   font-size: 3rem;
   line-height: 1;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.875rem;
   line-height: 2.25rem;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
+  font-weight: 700;
+}
+
+body {
+  font-weight: 400;
 }
 
 *, ::before, ::after {
@@ -826,9 +834,135 @@ h4 {
   margin-bottom: 1rem;
 }
 
+.mostrar_menu{
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
+}
+
+.custom-cursor{
+  position: absolute;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 30;
+  display: none;
+  /* radial-gradient(circle, rgba(246,232,13,1) 0%,  rgba(255,255,255,0) 70%); */
+  background: radial-gradient(circle,var(--color-cursor) 0%,rgba(255,255,255,0) 70%);
+}
+
 .headerSection {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  /* width: 300px;
+    height: 300px; */
+  aspect-ratio: 1/1;
+  /*Para hacer que siempre tenga el mismo h y w*/
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+
+.flip-card-back {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transform: rotateY(180deg);
+}
+
+.flip-card-back .lenguajes{
+  color:#0f172a;
+}
+
+.flip-card-front img{
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.ayuda + p{
+  opacity: 0;
+}
+
+.ayuda:hover + p{
+  animation: showHelp 0.7s forwards;
+}
+
+.experiencia_header{
+  color:var(--color-cabecera-experiencia);
+}
+
+.tiempo_experiencia{
+  color:var(--experiencia);
+}
+
+.habilidades-container{
+  background-color:var(--color-fondo);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades-container h4{
+  font-size: clamp(0.9em,4vw,1.12em);
+}
+
+.habilidades-icon{
+  color:var(--color-cabeceras-principales);
+  font-size: clamp(5.25em,4vw,6em);
+}
+
+.certificacion-box{
+  background-image:linear-gradient(to right,var(--color-body),var(--color-fondo));
+}
+
+.certificacion-box span{
+  color:var(--color-nota);
 }
 
 .fixed {
@@ -849,6 +983,10 @@ h4 {
 
 .bottom-7 {
   bottom: 1.75rem;
+}
+
+.bottom-\[40\%\] {
+  bottom: 40%;
 }
 
 .bottom-full {
@@ -1025,20 +1163,6 @@ h4 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes fadingInLeft {
-  from {
-    right: 200px;
-  }
-
-  to {
-    right: 0px;
-  }
-}
-
-.animate-fadingInLeft {
-  animation: fadingInLeft 1s ease-out;
-}
-
 @keyframes web_Load {
   0% {
     opacity: 0;
@@ -1083,6 +1207,10 @@ h4 {
 
 .content-center {
   align-content: center;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -1349,31 +1477,6 @@ h4 {
   content: var(--tw-content);
 }
 
-.after\:inline::after {
-  content: var(--tw-content);
-  display: inline;
-}
-
-.after\:content-\[\'\&laquo\;\'\]::after {
-  --tw-content: '&laquo;';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'despues\'\]::after {
-  --tw-content: 'despues';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'\&\#171\;\'\]::after {
-  --tw-content: '&#171;';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'\&\#xAB\;\'\]::after {
-  --tw-content: '&#xAB;';
-  content: var(--tw-content);
-}
-
 .invalid\:text-red-600:invalid {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -1547,5 +1650,29 @@ h4 {
 @media (min-width: 1536px) {
   .\32xl\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (orientation: portrait) {
+  .portrait\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .portrait\:right-0 {
+    right: 0px;
+  }
+
+  .portrait\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .portrait\:self-end {
+    align-self: flex-end;
+  }
+}
+
+@media (orientation: landscape) {
+  .landscape\:bottom-0 {
+    bottom: 0px;
   }
 }

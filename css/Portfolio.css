@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,500;1,800&display=swap');
 
-
-
 /*LIGHT THEME COLORS*/
 /*
 Primer color: #e7eaf6
@@ -17,17 +15,10 @@ Cuarto color: #113f67
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
     background-color:var(--color-body);
     color:var(--color-texto);
-    /* animation-name:Web_Load;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; */
 }
 
-h1,h2,h3,h4{
-    font-weight: 700;
-}
 
 h1{
     color:var(--color-cabeceras-principales);
@@ -69,8 +60,6 @@ input,textarea{
 #descargar_cv_url:hover ~ span{
     animation: Web_Load 0.5s ease-out forwards;
 }
-
-
 
 .articulo{
     border: 4px solid #a2a8d3; 
@@ -125,15 +114,6 @@ input,textarea{
     transition-timing-function: ease-out;
 }
 
-.ayuda + p{
-    opacity: 0;
-}
-
-
-.ayuda:hover + p{
-    animation: showHelp 0.7s forwards;
-}
-
 
 @keyframes showHelp {
     0%{opacity:0;}
@@ -144,93 +124,11 @@ input,textarea{
     width: 100%;
 }
 
-.certificacion-box{
-    background-image:linear-gradient(to right,var(--color-body),var(--color-fondo));
-}
-
-.certificacion-box span{
-    color:var(--color-nota);
-}
-
-.flip-card {
-    background-color: transparent;
-    /* width: 300px;
-    height: 300px; */
-    aspect-ratio: 1/1; /*Para hacer que siempre tenga el mismo h y w*/
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-back .lenguajes{
-    color:#0f172a;
-  }
-
-
-
-  .flip-card-front img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-
-
-/* .experiencia_container{
-    border-bottom: lightslategrey 2px solid;
-} */
-
-/* .experiencia_container:last-of-type{
-    border-bottom:none;
-} */
-
-
 #alert{
     display:none;
 }
 
-
-
 /* CONTENIDO DEL MENÚ LATERAL */
-
 
 .contenido_menu_inicio{
     width: 100%;
@@ -246,37 +144,12 @@ input,textarea{
     opacity: 1;
 }
 
-.mostrar_menu{
-    transition-duration: 0.75s;
-    transition-timing-function: ease-out;
-}
 
 /* MENU LATERAL */
 
 #sideBarMenu{
     bottom:40%;
     align-items: start;
-}
-
-.habilidades-container{
-    background-color:var(--color-fondo);
-}
-
-.habilidades-container h4{
-    font-size: clamp(0.9em,4vw,1.12em);
-}
-
-.habilidades-icon{
-    color:var(--color-cabeceras-principales);
-    font-size: clamp(5.25em,4vw,6em);
-}
-
-.experiencia_header{
-    color:var(--color-cabecera-experiencia);
-}
-
-.tiempo_experiencia{
-    color:var(--experiencia);
 }
 
 #otras_habilidades i{
@@ -316,21 +189,6 @@ input,textarea{
     to{opacity: 1;}
 }
 
-
-.custom-cursor{
-    position: absolute;
-    pointer-events:none; 
-    transform:translate(-50%,-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    z-index: 30;
-    
-    /* radial-gradient(circle, rgba(246,232,13,1) 0%,  rgba(255,255,255,0) 70%); */
-    background: radial-gradient(circle,var(--color-cursor) 0%,rgba(255,255,255,0) 70%);
-}
-
-
 :root{
     --color-cabeceras-principales:#113f67;
     --color-items-lista: #12548d;
@@ -369,7 +227,6 @@ input,textarea{
     }
 }
 
-
 @media screen and (max-width: 1020px){
     .contenido_menu_inicio{
         background-color:  var(--color-fondo);
@@ -382,10 +239,6 @@ input,textarea{
 }
 
 @media screen and (orientation: portrait) {
-    #sideBarMenu{
-        bottom:0%;
-        right: 0%;
-    }
 
     .botonMenu{
         align-self: end;
@@ -394,8 +247,3 @@ input,textarea{
     
 }
 
-@media screen and (orientation: landscape){
-    #sideBarMenu{
-        bottom: 0%;
-    }
-}

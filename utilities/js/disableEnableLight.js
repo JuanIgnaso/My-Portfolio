@@ -32,12 +32,12 @@
             isEnabled = false;
         }else{
            enableLight();
-           $('#enable_light').text(' Deshabilitar');
            isEnabled = true; 
         }
         setFocusLocalStorage(isEnabled.toString());
         });
        
+        //Guardar el estado del focus en localStorage
         function setFocusLocalStorage(state){
             localStorage.setItem('focus',state);
         }
