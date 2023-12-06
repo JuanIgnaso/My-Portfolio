@@ -935,6 +935,10 @@ h4 {
   margin-left: 0.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -953,10 +957,6 @@ h4 {
 
 .mt-\[20px\] {
   margin-top: 20px;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -1073,10 +1073,6 @@ h4 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-row-reverse {
   flex-direction: row-reverse;
 }
@@ -1087,10 +1083,6 @@ h4 {
 
 .content-center {
   align-content: center;
-}
-
-.content-start {
-  align-content: flex-start;
 }
 
 .items-center {
@@ -1179,6 +1171,11 @@ h4 {
 .border-portfolioAzul2 {
   --tw-border-opacity: 1;
   border-color: rgb(162 168 211 / var(--tw-border-opacity));
+}
+
+.border-portfolioAzul3 {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 89 139 / var(--tw-border-opacity));
 }
 
 .border-portfolioAzul5 {
@@ -1301,10 +1298,6 @@ h4 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
 .opacity-0 {
   opacity: 0;
 }
@@ -1356,6 +1349,31 @@ h4 {
   content: var(--tw-content);
 }
 
+.after\:inline::after {
+  content: var(--tw-content);
+  display: inline;
+}
+
+.after\:content-\[\'\&laquo\;\'\]::after {
+  --tw-content: '&laquo;';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'despues\'\]::after {
+  --tw-content: 'despues';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'\&\#171\;\'\]::after {
+  --tw-content: '&#171;';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'\&\#xAB\;\'\]::after {
+  --tw-content: '&#xAB;';
+  content: var(--tw-content);
+}
+
 .invalid\:text-red-600:invalid {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -1384,6 +1402,11 @@ h4 {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-portfolioAzul3:hover {
+  --tw-text-opacity: 1;
+  color: rgb(56 89 139 / var(--tw-text-opacity));
+}
+
 @keyframes activeButton {
   0% {
     transform: scale(1.125);
@@ -1404,10 +1427,6 @@ h4 {
 
 .active\:animate-activeButton:active {
   animation: activeButton 0.5s;
-}
-
-.group:hover .group-hover\:block {
-  display: block;
 }
 
 .group:hover .group-hover\:inline {

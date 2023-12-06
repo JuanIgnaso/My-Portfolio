@@ -282,7 +282,7 @@
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>I3TE Porriño</h3></li>
                     <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
-                            <h4 class="underline">Mi rol</h4>
+                            <h4><span class="text-red-600">&raquo;</span>Mi rol</h4>
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
                 </ol>
@@ -291,7 +291,7 @@
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>Software Quobis Porriño</h3></li>
                     <li><h4 class="text-portfolioAzul2"><span class="tiempo_experiencia">3 meses</span> como Ayudante en Prácticas</h4></li>
                     <li>
-                            <h4 class="underline">Mi rol</h4>
+                            <h4><span class="text-red-600">&raquo;</span>Mi rol</h4>
                             Ayudar al equipo a buscar e implementar funciones para aplicaciones en producción con JS y PHP, Testing de Aplicacionnes.
                     </li>
                 </ol> 
@@ -391,17 +391,38 @@
                 <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-3 mb-3"></div>
             </header>
             
-            <div class="flex flex-col">
-                <h3 class="text-right text-2xl mt-3">Mis Contactos</h3>
+            <article class="flex flex-col">
+                <h3 class="text-right text-2xl mt-3 mb-2">Mis Contactos</h3>
                 <div class="flex flex-row-reverse section_content">
-                    <ol id="mis_contactos_list" class="text-right text-xl">
-                        <li class="flex gap-2 items-center justify-end">Linkedin <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a></li>
-                        <li class="flex gap-2 items-center justify-end">+34 999 999 999<i class="fa-solid fa-phone  text-portfolioAzul4"></i></li>
-                        <li class="flex gap-2 items-center justify-end">Github <a href=""><i class="fa-brands fa-github  text-portfolioAzul4"></i></a></li>
+                    <ol id="mis_contactos_list" class="text-right text-xl border-t-2 border-gray-400">
+                        <li class="flex flex-col items-center justify-end mb-2 mt-2 relative">
+                            <div class="group self-end  ">
+                                Linkedin 
+                                <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
+                            </div>
+                        </li>
+
+                        <li class="flex flex-col items-center justify-end mb-2 relative">
+                            <div class="group self-end">
+                                +34 999 999 999
+                                <i class="fa-solid fa-phone  text-portfolioAzul4"></i>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
+                            </div>
+                        </li>
+
+                        <li class="flex flex-col items-center justify-end mb-2 relative">
+                            <div class="group self-end">
+                                Github
+                                <a href=""><i class="fa-brands fa-github text-portfolioAzul4"></i></a>
+                                <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
+                            </div>
+                        </li>
+
                     </ol>
                 </div>
-                
-            </div>
+            </article>
+
             <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
             
             <!-- FORMULARIO DE LA WEB ***************************************-->
@@ -476,9 +497,9 @@
             <li><h3>Gracias por visitar mi Portfolio</h3></li>
             <li class="text-xs">© 2023 Juan Navarrete. Derechos reservados</li>
             <li class="text-portfolioAzul2 text-2xl flex justify-center gap-3 mt-6">
-                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-github"></i></a>
+                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-square-twitter"></i></a>
             </li>
         </ol>
         
