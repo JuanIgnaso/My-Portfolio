@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/output.css">
     <link rel="stylesheet" href="/css/Portfolio.css">
-
-    <!-- ICONOS -->
-    <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="/fontawesome/css/all.css">
-
-    <!-- JQUERY -->
-    <script
-			  src="https://code.jquery.com/jquery-3.7.1.js"
-			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-			  crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="/fontawesome/css/all.css"><!-- ICONOS FONTAWESOME -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>Mi Portfolio</title>
 </head>
-<body class="animate-web_Load">
 
+<body class="animate-web_Load">
     <!-- BOTÓN DE DARKMODE -->
     <div class="top-[10px] left-[10px] fixed z-10 flex flex-col md:flex-row align-center gap-2">
         <button id="darkmode-btn" class="w-[40px] h-[40px]"><i class="fa-regular fa-sun text-xl"></i></button>
@@ -27,16 +18,17 @@
             <i class="fa-regular fa-lightbulb"></i><span class="hidden group-hover:inline" id="enable_light"> Deshabilitar</span>
         </button>
     </div>
-    <!--  -->
+    <script src="utilities/js/toggleDarkMode.js"></script><!-- JS Habilitar/Deshabilitar DarkMode -->
+    <script src="utilities/js/disableEnableLight.js"></script> <!-- JS Habilitar/Deshabilitar foco luz -->
+    <!-- ***************** -->
 
-    <div class="custom-cursor"></div>
-
-    <script src="utilities/js/disableEnableLight.js"></script>
+    <div class="custom-cursor"></div><!-- Cursor Modo Oscuro -->
 
 
-    <h4 class="text-center md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></h4>
 
-    <!-- MENÚ DE INICIO -->
+    <p class="text-center font-bold text-portfolioAzul3 md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></p>
+
+    <!-- MENÚ DE INICIO **************************************-->
 
     <nav  class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col bottom-[40%] items-start portrait:bottom-0 portrait:right-0 landscape:bottom-0">
         <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu pr-[5px] sm:pr-0">
@@ -47,13 +39,15 @@
             <li class="mb-[5px] hover:font-bold"><a href="#proyectos">Mis Proyectos</a></li>
         </ol>
         <button id="btnMenu" class="botonMenu transformar font-bold text-left border-t-4 border-portfolioAzul2 portrait:self-end portrait:justify-end"><i class="fa-solid fa-house"></i></button>
-        <script src="utilities/js/activateLeftMenu.js"></script>
-        <script src="utilities/js/changeSideBarButton.js"></script>
+        <script src="utilities/js/activateLeftMenu.js"></script> <!-- JS Abrir el menú lateral -->
+        <script src="utilities/js/changeSideBarButton.js"></script> <!-- JS Cambiar de lado el menú en pantallas inferiores a 1000px -->
     </nav>
+    <!-- ********************************* -->
 
-    <!-- CONTENEDOR DE LA WEB -->
+    <!-- CONTENEDOR DE LA WEB *******************************-->
     <div class="mt-[20px] w-[90%] sm:w-[80%] lg:w-[60%] m-auto">
-
+        
+        <!-- CABECERA DE LA WEB -->
         <header class='text-left'>
             <h1 id="titular_pagina" class="text-center">Bienvenido, Mi nombre es Juan</h1>
             <figure>
@@ -62,28 +56,24 @@
             </figure>
         </header>
 
-        <!-- SECCION:
-        Sobre Mí
-        -->
+        <!-- SECCION: Sobre Mí------------------------------------>
         <section class="mb-10">
-            <h2 id="sobreMi" class="headerSection">Sobre Mí:</h2>
+            <h2 class="headerSection" id="sobreMi">Sobre Mí:</h2>
             <!-- Section divider -->
             <div class="sectionDivider"></div>
             <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
             <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
         </section>
+        <!-- *************************************************** -->
 
-
-        <!-- SECCION:
-        Mis Habilidades
-        -->
+        <!-- SECCION: Mis Habilidades-------------------------------------------------->
         <section class="mb-10">
             <header class="mb-[10px]">
                 <h2 id="habilidades" class="headerSection">Mis Habilidades:</h2>
                 <div class="sectionDivider"></div>
                 <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
             </header>
-            
+            <!-- LENGUAJES------------------------------------------>
             <article class="section_content">
                 <h3 class="mb-[10px]">Lenguajes</h3>
                 <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
@@ -161,6 +151,7 @@
                 </ol>
             </article>               
               
+            <!-- FRAMEWORKS ------------------------------------------------------------------------>
             <article class="section_content">
                 <h3 class="mb-[10px]">Frameworks</h3>
                 <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
@@ -207,8 +198,9 @@
                     </li>
                 </ol>
             </article> 
+            <script src="utilities/js/defineLvlColor.js"></script> <!--JS Cambia el color de los cuadros de lenguajes/frameworks según el nivel -->
 
-            <!-- OTRAS HABILIDADES -->
+            <!-- OTRAS HABILIDADES --------------------------------------------------------->
             <article class="text-right">
                 <h3>Otras Habilidades</h3>
                 <div class="border-[1px] border-gray-300 mt-4 mb-4"></div>
@@ -226,21 +218,18 @@
                     </li>
                 </ol>
             </article>
-        
-            <script src="utilities/js/defineLvlColor.js"></script>
         </section>
-        <!-- 
-        Certificaciones
-        -->
+        <!-- ******************************************************************************* -->
+
+        <!-- SECCIÓN: Certificaciones----------------------------------------------------------------->
         <section class="mb-10">
             <h2 id="estudios" class="headerSection">Mis Estudios:</h2>
             <div class="sectionDivider"></div>
 
             <div class="section_content">
                 <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
-            <!-- Centro,titulo,inicio y fin y nota
-             grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
-            -->
+            
+                <!-- CONTENEDOR ESTUDIOS------------------------------------->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-[15px]">
                     <article class="min-h-[110px] p-1 flex justify-between  certificacion-box">
                         <div>
@@ -265,17 +254,14 @@
 
                 </div>
             </div>
-            
-            
         </section>
+        <!--------------------------------------------------------------------------------->
 
-        <!-- SECCION:
-        Experiencia Laboral
-        -->
-
+        <!-- SECCION: Experiencia Laboral------------------------------------------------->
         <section class="mb-10">
             <h2 id="experiencia" class="headerSection">Mi Experiencia Laboral:</h2>
             <div class="sectionDivider"></div>
+            <!-- CONTENEDOR EXPERIENCIA--------------------------------->
             <div class="experiencia_container relative flex flex-col gap-3 overflow-hidden">
                 <!-- exp-left -->
                 <ol class="relative right-1/2 opacity-0 border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
@@ -297,16 +283,13 @@
                 </ol> 
 
             </div>
-           
             <!-- clases de los elementos exp-left exp-right -->
-            <script src="utilities/js/loadElementsInDocument.js"></script>
+            <script src="utilities/js/loadElementsInDocument.js"></script> <!-- JS Carga elementos según van apareciendo en pantalla -->
             
         </section>
 
 
-        <!--SECCION: 
-        Trabajos realizados
-         -->
+        <!--SECCION: Trabajos realizados------------------------------------------------->
          <section class="mb-10">
             <h2 id="proyectos" class="headerSection">Proyectos Realizados:</h2>
             <div class="sectionDivider"></div>
@@ -314,6 +297,7 @@
             <!-- Contenedor de proyectos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative section_content">
 
+                <!-- Elemento Proyecto -->
                 <div class="flip-card section-content">
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
@@ -347,6 +331,7 @@
                     </div>
                   </div> 
 
+                  <!-- Elemento Proyecto -->
                   <div class="flip-card">
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
@@ -384,19 +369,19 @@
             
         </section>
 
-        <!-- FORMULARIO DE CONTACTO -->
+        <!-- FORMULARIO DE CONTACTO------------------------------------------->
         <section class="mb-10">
             <header class="flex flex-col align-top">
                 <h2 class="headerSection text-right">Contáctame</h2>
                 <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-3 mb-3"></div>
             </header>
-            
+            <!-- AREA DE CONTACTO------------------------------------------------>
             <article class="flex flex-col">
                 <h3 class="text-right text-2xl mt-3 mb-2">Mis Contactos</h3>
                 <div class="flex flex-row-reverse section_content">
                     <ol id="mis_contactos_list" class="text-right text-xl border-t-2 border-gray-400">
                         <li class="flex flex-col items-center justify-end mb-2 mt-2 relative">
-                            <div class="group self-end  ">
+                            <div class="group self-end">
                                 Linkedin 
                                 <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
@@ -435,7 +420,9 @@
                 </div>
                 <!--  -->
                
+                <!-- NOMBRE Y CORREO----------------------------------->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3  mb-4 section_content">
+                   <!-- CAJAS DE LOS INPUTS -->
                     <div class="flex flex-col">
                         <label for="nombre" class="flex content-center items-center">
                             Nombre 
@@ -487,28 +474,22 @@
 
                 <button type="submit" onclick="messageFailure()" id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
             </form>
-            <script src="utilities/js/showFormActions.js"></script>
+            <script src="utilities/js/showFormActions.js"></script> <!-- JS Muestra la alerta encima del formulario y muestra mensajes de error -->
         </section>
 
 
-            <!-- FOOTER DE LA WEB -->
-    <footer class="w-full border-t-2 border-portfolioAzul2 p-8">
-        <ol class="text-center flex flex-col gap-2">
-            <li><h3>Gracias por visitar mi Portfolio</h3></li>
-            <li class="text-xs">© 2023 Juan Navarrete. Derechos reservados</li>
-            <li class="text-portfolioAzul2 text-2xl flex justify-center gap-3 mt-6">
-                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-github"></i></a>
-                <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-square-twitter"></i></a>
-            </li>
-        </ol>
-        
-    </footer>
+    <!-- FOOTER DE LA WEB --------------------------------------------->
+        <footer class="w-full border-t-2 border-portfolioAzul2 p-8">
+            <ol class="text-center flex flex-col gap-2">
+                <li><h3>Gracias por visitar mi Portfolio</h3></li>
+                <li class="text-xs">© 2023 Juan Navarrete. Derechos reservados</li>
+                <li class="text-portfolioAzul2 text-2xl flex justify-center gap-3 mt-6">
+                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-github"></i></a>
+                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-square-twitter"></i></a>
+                </li>
+            </ol>
+        </footer>
     </div>
-
-
-
-    
-<script src="utilities/js/toggleDarkMode.js"></script>
 </body>
 </html>

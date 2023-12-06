@@ -1406,6 +1406,11 @@ body {
   color: rgb(162 168 211 / var(--tw-text-opacity));
 }
 
+.text-portfolioAzul3 {
+  --tw-text-opacity: 1;
+  color: rgb(56 89 139 / var(--tw-text-opacity));
+}
+
 .text-portfolioAzul4 {
   --tw-text-opacity: 1;
   color: rgb(17 63 103 / var(--tw-text-opacity));

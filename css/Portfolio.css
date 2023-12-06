@@ -6,12 +6,26 @@ Primer color: #e7eaf6
 Segundo color: #a2a8d3
 Tercer color: #38598b
 Cuarto color: #113f67
+
+
+FUENTE DE LA WEB: 'Poppins, sans-serif'
+
+CSS Dividido por Secciones(Si no aparecen algunas es porque sus
+estilos no están en este CSS "mirar input.css"):
+-Cabecera
+-Botón darkmode
+-Menú lateral
+-Sobre Mí
+-Habilidades
+-Certificaciones
+-Experiencia Laboral
+-Trabajos realizados
+-Formulario
+-keyframes
+-media queries
 */
 
-@keyframes Web_Load {
-    0%{opacity: 0};
-    100%{opacity: 1};
-}
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -42,30 +56,10 @@ input,textarea{
 ::selection {
     color:var(--text-selected-color);
     background-color:var(--text-background-selected-color);
-  }
-
-#enviar{
-    color:white;
-    background-color: #113f67;
 }
 
-#descargar_cv{
-    font-size: clamp(0.82em,3vw,1em);
-}
 
-#descargar_cv_url ~ span{
-    opacity: 0;
-}
-
-#descargar_cv_url:hover ~ span{
-    animation: Web_Load 0.5s ease-out forwards;
-}
-
-.articulo{
-    border: 4px solid #a2a8d3; 
-    background-color: var(--color-fondo);
-}
-
+/*CABECERA DE LA WEB----------------------------------------------*/
 #titular_pagina{
     font-size:clamp(2.25rem,4vw,3rem);
 }
@@ -87,6 +81,11 @@ input,textarea{
     color:var(--color-cabeceras-principales);
 }
 
+/*------------------------------------------------------------*/
+
+
+/*BOTÓN DARKMODE----------------------------------------------*/
+
 #darkmode-btn{
     border: 4px solid var(--color-cabecera-secundaria);
     background:var(--color-body);
@@ -95,8 +94,9 @@ input,textarea{
 #darkmode-btn i{
     color:var(--boton-dark-mode);
 }
+/*-------------------------------------------------------------*/
 
-/* ACCION BOTÓN DEL MENU */
+/*MENÚ LATERAL DE LA WEB--------------------------------------*/
 .botonMenu{
     display: flex;
     align-items: center;
@@ -114,18 +114,8 @@ input,textarea{
     transition-timing-function: ease-out;
 }
 
-
-@keyframes showHelp {
-    0%{opacity:0;}
-    100%{opacity: 1}
-}
-
 .menu_abierto{
     width: 100%;
-}
-
-#alert{
-    display:none;
 }
 
 /* CONTENIDO DEL MENÚ LATERAL */
@@ -144,13 +134,33 @@ input,textarea{
     opacity: 1;
 }
 
+/*-------------------------------------------------------*/
 
-/* MENU LATERAL */
+/*MIS HABILIDADES--------------------------------------------------*/
 
-#sideBarMenu{
-    bottom:40%;
-    align-items: start;
+#descargar_cv_url ~ span{
+    opacity: 0;
 }
+
+#descargar_cv_url:hover ~ span{
+    animation: Web_Load 0.5s ease-out forwards;
+}
+
+#descargar_cv{
+    font-size: clamp(0.82em,3vw,1em);
+}
+
+/*----------------------------------------------------------------*/
+
+/*FORMULARIO CONTACTO---------------------------------------------*/
+
+#enviar{
+    color:white;
+    background-color: #113f67;
+}
+
+/*----------------------------------------------------------------*/
+
 
 #otras_habilidades i{
     color: var(--color-items-lista);
@@ -172,6 +182,18 @@ input,textarea{
     opacity: 0;
 }
 
+#alert{
+    display:none;
+}
+
+
+/*ANIMACIONES------------------------------------------------*/
+
+@keyframes showHelp {
+    0%{opacity:0;}
+    100%{opacity: 1}
+}   
+
 @keyframes fadeInLeft {
   0% {right:25%;opacity: 0;}
   70%{opacity: 0.2;}
@@ -189,37 +211,14 @@ input,textarea{
     to{opacity: 1;}
 }
 
-:root{
-    --color-cabeceras-principales:#113f67;
-    --color-items-lista: #12548d;
-    --color-cabecera-secundaria:#38598b;
-    --color-fondo:#e7eaf6;
-    --color-body:#fff;
-    --color-texto:#000;
-    --boton-dark-mode:orangered;
-    --color-nota:#113f67; 
-    --text-background-selected-color:#113f67;
-    --text-selected-color:#fff;
-    --color-cabecera-experiencia:#4c1d95;
-    --experiencia:#38598b;
-    --color-cursor:none;
+@keyframes Web_Load {
+    0%{opacity: 0};
+    100%{opacity: 1};
 }
+/*----------------------------------------------------------------*/
 
-.dark-mode{
-    --color-body:#0f172a;
-    --color-texto:#e7eaf6;
-    --color-cabecera-secundaria:#a2a8d3;
-    --color-fondo:#113f67;
-    --color-cabeceras-principales:#808ad3;
-    --boton-dark-mode: var(--color-texto);
-    --color-nota:#a2a8d3;
-    --text-background-selected-color:#e7eaf6;
-    --text-selected-color:#000;
-    --color-cabecera-experiencia:#c084fc;
-    --experiencia:#e7eaf6;
-    --color-cursor:rgba(255,255,255,0.7);
-}
 
+/*MEDIA QUERIES---------------------------------------------------*/
 @media screen and (max-width: 360px){
     #mifoto{
         width: 300px;
@@ -246,4 +245,41 @@ input,textarea{
     }
     
 }
+/*-----------------------------------------------------*/
+
+/*COLORES BASE DE LA WEB-------------------------------*/
+
+:root{
+    --color-cabeceras-principales:#113f67;
+    --color-items-lista: #12548d;
+    --color-cabecera-secundaria:#38598b;
+    --color-fondo:#e7eaf6;
+    --color-body:#fff;
+    --color-texto:#000;
+    --boton-dark-mode:orangered;
+    --color-nota:#113f67; 
+    --text-background-selected-color:#113f67;
+    --text-selected-color:#fff;
+    --color-cabecera-experiencia:#4c1d95;
+    --experiencia:#38598b;
+    --color-cursor:none;
+}
+
+/*COLORES MODO OSCURO*/
+.dark-mode{
+    --color-body:#0f172a;
+    --color-texto:#e7eaf6;
+    --color-cabecera-secundaria:#a2a8d3;
+    --color-fondo:#113f67;
+    --color-cabeceras-principales:#808ad3;
+    --boton-dark-mode: var(--color-texto);
+    --color-nota:#a2a8d3;
+    --text-background-selected-color:#e7eaf6;
+    --text-selected-color:#000;
+    --color-cabecera-experiencia:#c084fc;
+    --experiencia:#e7eaf6;
+    --color-cursor:rgba(255,255,255,0.7);
+}
+/*-------------------------------------------------*/
+
 
