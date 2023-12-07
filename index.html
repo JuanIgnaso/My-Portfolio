@@ -13,8 +13,8 @@
 <body class="animate-web_Load">
     <!-- BOTÓN DE DARKMODE -->
     <div class="top-[10px] left-[10px] fixed z-10 flex flex-col md:flex-row align-center gap-2" role="menu">
-        <button id="darkmode-btn" class="w-[40px] h-[40px]"><i class="fa-regular fa-sun text-xl"></i></button>
-        <button id="disable_light" class="group relative flex">
+        <button aria-label="Activar Dark Mode" id="darkmode-btn" class="w-[40px] h-[40px]"><i class="fa-regular fa-sun text-xl"></i></button>
+        <button aria-label="Habilitar Foco" id="disable_light" class="group relative flex">
             <i class="fa-regular fa-lightbulb"></i><span class="hidden group-hover:inline" id="enable_light"> Deshabilitar</span>
         </button>
     </div>
@@ -26,10 +26,10 @@
 
 
 
-    <p class="text-center font-bold text-portfolioAzul3 md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></p>
+    <header class="text-center font-bold text-portfolioAzul3 md:text-right p-[5px]" id="info_Cabecera">Web construida con <strong>Tailwind</strong></header>
 
     <!-- MENÚ DE INICIO **************************************-->
-
+<aside>
     <nav class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col bottom-[40%] items-start portrait:bottom-0 portrait:right-0 landscape:bottom-0">
         <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu pr-[5px] sm:pr-0">
             <li class="mb-[5px] hover:font-bold"><a href="#sobreMi">Sobre Mi</a></li>
@@ -42,6 +42,7 @@
         <script src="utilities/js/activateLeftMenu.js"></script> <!-- JS Abrir el menú lateral -->
         <script src="utilities/js/changeSideBarButton.js"></script> <!-- JS Cambiar de lado el menú en pantallas inferiores a 1000px -->
     </nav>
+</aside>
     <!-- ********************************* -->
 
     <!-- CONTENEDOR DE LA WEB *******************************-->
@@ -58,11 +59,13 @@
 
         <!-- SECCION: Sobre Mí------------------------------------>
         <section class="mb-10">
-            <h2 class="headerSection" id="sobreMi">Sobre Mí:</h2>
+            <h2 class="headerSection" id="sobreMi" >Sobre Mí:</h2>
             <!-- Section divider -->
-            <div class="sectionDivider"></div>
-            <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
-            <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
+            <div class="sectionDivider" role="separator"></div>
+            <article>
+                <p>Hola 😄, Mi nombre es Juan Navarrete y soy programador Junior de Front End desarrollador de páginas e interfaces Web, con poca experiencia pero siempre con ganas y ambición de saber más, he escogido esta rama porque siempre me ha fascinado el mundo de interenet, y me encantaría compartir y contribuir en ello.</p>
+                <p>Con conocimientos de HTML5, JavaScript, CSS y PHP, soy una persona dedicada al trabajo y responsable, que no le importa trabajar en equipo en todo tipo de proyectos.</p>
+            </article>
         </section>
         <!-- *************************************************** -->
 
@@ -70,7 +73,7 @@
         <section class="mb-10">
             <header class="mb-[10px]">
                 <h2 id="habilidades" class="headerSection">Mis Habilidades:</h2>
-                <div class="sectionDivider"></div>
+                <div class="sectionDivider" role="separator"></div>
                 <p>Aquí se muestra mis habilidades como programador, mostrando los lenguajes de los que soy conocedor y nivel sobre ellos:</p>
             </header>
             <!-- LENGUAJES------------------------------------------>
@@ -203,7 +206,7 @@
             <!-- OTRAS HABILIDADES --------------------------------------------------------->
             <article class="text-right">
                 <h3>Otras Habilidades</h3>
-                <div class="border-[1px] border-gray-300 mt-4 mb-4"></div>
+                <div class="border-[1px] border-gray-300 mt-4 mb-4" role="separator"></div>
                 <p class="mb-[8px]">Además de tener conocimentos en los entornos anteriormente mencionados también...</p>
                 <ol id="otras_habilidades" class="font-bold section_content">
                     <li>Siempre puntual<i class="fa-solid fa-circle-notch text-xs ml-2"></i></li>
@@ -213,7 +216,7 @@
                     <li>Manejo básico de redes<i class="fa-solid fa-circle-notch text-xs ml-2 "></i></li>
                     <li class="mt-8 font-normal relative" id="descargar_cv">
                         Puedes hacerte con mi CV descargándolo en aquí 
-                        <a id="descargar_cv_url" href="/utilities/files/Currículum Juan Navarrete.pdf" download="mi_CV"><i class="fa-solid fa-download text-2xl" alt="descargar CV pdf"></i></a>
+                        <a id="descargar_cv_url" href="/utilities/files/Currículum Juan Navarrete.pdf" download="mi_CV" aria-label="descargar curriculum"><i class="fa-solid fa-download text-2xl" alt="descargar CV pdf"></i></a>
                         <span class="absolute bottom-7 text-xs right-0">Descargar versión PDF</span>
                     </li>
                 </ol>
@@ -224,7 +227,7 @@
         <!-- SECCIÓN: Certificaciones----------------------------------------------------------------->
         <section class="mb-10">
             <h2 id="estudios" class="headerSection">Mis Estudios:</h2>
-            <div class="sectionDivider"></div>
+            <div class="sectionDivider" role="separator"></div>
 
             <div class="section_content">
                 <p class="mb-3">Todos estos conocimentos o en parte los he adquirido gracias a las siguientes titulaciones académicas:</p>
@@ -260,9 +263,9 @@
         <!-- SECCION: Experiencia Laboral------------------------------------------------->
         <section class="mb-10">
             <h2 id="experiencia" class="headerSection">Mi Experiencia Laboral:</h2>
-            <div class="sectionDivider"></div>
+            <div class="sectionDivider" role="separator"></div>
             <!-- CONTENEDOR EXPERIENCIA--------------------------------->
-            <div class="experiencia_container relative flex flex-col gap-3 overflow-hidden">
+            <article class="experiencia_container relative flex flex-col gap-3 overflow-hidden">
                 <!-- exp-left -->
                 <ol class="relative right-1/2 opacity-0 border-dotted border-2 border-portfolioAzul2 w-full md:w-1/2 text-center p-3 self-center md:self-start">
                     <li><h3 class="text-3xl experiencia_header"><span class="text-red-600">&#9866;</span>I3TE Porriño</h3></li>
@@ -282,7 +285,7 @@
                     </li>
                 </ol> 
 
-            </div>
+            </article>
             <!-- clases de los elementos exp-left exp-right -->
             <script src="utilities/js/loadElementsInDocument.js"></script> <!-- JS Carga elementos según van apareciendo en pantalla -->
             
@@ -292,17 +295,17 @@
         <!--SECCION: Trabajos realizados------------------------------------------------->
          <section class="mb-10">
             <h2 id="proyectos" class="headerSection">Proyectos Realizados:</h2>
-            <div class="sectionDivider"></div>
+            <div class="sectionDivider" role="separator"></div>
 
             <!-- Contenedor de proyectos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 relative section_content">
 
                 <!-- Elemento Proyecto -->
-                <div class="flip-card section-content">
+                <div tabindex="0" class="flip-card section-content">
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="utilities/img/Sample_Image.png" alt="preview de la imagen del proyecto">
+                        <img src="utilities/img/Sample_Image.png" alt="imagen preview juego piedra papel y tijeras">
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
@@ -319,11 +322,11 @@
                         <!-- Opciones -->
                         <ol class="flex justify-center gap-3 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] font-black">
                             <li class="group">
-                                <a href="">Ver</a>
+                                <a aria-label="ver proyecto" href="index.html">Ver</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                             <li class="group">
-                                <a href="">Descargar</a>
+                                <a aria-label="descargar proyecto" href="https://google.es">Descargar</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                         </ol>
@@ -332,11 +335,11 @@
                   </div> 
 
                   <!-- Elemento Proyecto -->
-                  <div class="flip-card">
+                  <div tabindex="0" class="flip-card">
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="utilities/img/Sample_Image_2.png"  alt="preview de la imagen del proyecto">
+                        <img src="utilities/img/Sample_Image_2.png"  alt="imagen preview juego tres en raya">
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
@@ -353,11 +356,11 @@
                         <!-- Opciones -->
                         <ol class="flex justify-center gap-3 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] font-black">
                             <li class="group">
-                                <a href="">Ver</a>
+                                <a aria-label="ver proyecto" href="index.html">Ver</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                             <li class="group">
-                                <a href="">Descargar</a>
+                                <a aria-label="descargar proyecto" href="https://webaim.org/">Descargar</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                         </ol>
@@ -373,7 +376,7 @@
         <section class="mb-10">
             <header class="flex flex-col align-top">
                 <h2 class="headerSection text-right">Contáctame</h2>
-                <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-3 mb-3"></div>
+                <div class="border-2 self-end w-1/2 border-portfolioAzul2 mt-3 mb-3" role="separator"></div>
             </header>
             <!-- AREA DE CONTACTO------------------------------------------------>
             <article class="flex flex-col">
@@ -383,7 +386,7 @@
                         <li class="flex flex-col items-center justify-end mb-2 mt-2 relative">
                             <div class="group self-end">
                                 Linkedin 
-                                <a href=""><i class="fa-brands fa-linkedin-in  contacto_icono"></i></a>
+                                <a href="" aria-label="enlace a linkedin"><i class="fa-brands fa-linkedin-in  contacto_icono"></i></a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
                             </div>
                         </li>
@@ -399,7 +402,7 @@
                         <li class="flex flex-col items-center justify-end mb-2 relative">
                             <div class="group self-end">
                                 Github
-                                <a href=""><i class="fa-brands fa-github  contacto_icono"></i></a>
+                                <a href="" aria-label="enlace a github"><i class="fa-brands fa-github  contacto_icono"></i></a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
                             </div>
                         </li>
@@ -414,10 +417,13 @@
             <form action="destino.php" method="post" target="_blank" oninvalid="algomal()" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400" id="formulario_mensaje">
                
                <!-- Alert card -->
-                <div id="alert" class=" p-2 text-white font-bold cursor-auto">
-                    <span class="cursor-pointer closebtn hover:text-black" onclick="this.parentElement.style.display='none';">&times;</span>
-                    <span id="card_message"></span>
-                </div>
+               <div role="alert">
+                    <div id="alert" class=" p-2 text-white font-bold cursor-auto">
+                        <span class="cursor-pointer closebtn hover:text-black" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <span id="card_message"></span>
+                    </div>
+               </div>
+                
                 <!--  -->
                
                 <!-- NOMBRE Y CORREO----------------------------------->
@@ -428,10 +434,10 @@
                             Nombre 
                             <div class="relative ml-2">
                                 <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
-                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba su nombre aquí</p>
+                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3" role="tooltip">Escriba su nombre aquí</p>
                             </div>
                         </label>
-                        <input required type="text" name="nombre" oninvalid="showAlert(this,'Introduce un nombre de entre 3 y 16 caracteres, solo letras estan permitidas.')" id="nombre" pattern="([a-zA-Zñ](\s[a-zA-Zñ]+)?){3,16}" class="form-input  invalid:text-red-600 " placeholder="Introduce aquí tu nombre...">
+                        <input required type="text" name="nombre" oninvalid="showAlert(this,'Escriba un nombre de entre 3 y 16 caracteres, usando solo letras y espacios, Ej: nombre apellido.')" id="nombre" pattern="([a-zA-Zñ](\s[a-zA-Zñ]+)?){3,16}" class="form-input  invalid:text-red-600 " placeholder="Introduce aquí tu nombre...">
                         <p id="nombre_error" class="text-xs text-red-700 text-alert"></p>
                     </div>
                     
@@ -440,7 +446,7 @@
                             Tu correo 
                             <div class="relative ml-2">
                                 <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
-                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Introduce un correo que sea válido</p>
+                                <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3" role="tooltip">Introduce un correo que sea válido</p>
                             </div>
                         </label>
                         <input required type="email" name="correo" id="correo" oninvalid="showAlert(this,'Porfavor, introduce un correo válido.')" class="form-input invalid:text-red-600 " placeholder="Escribe aqui tu correo..." title="Introduce un correo que sea válido">
@@ -453,7 +459,7 @@
                         Motivo 
                         <div class="ml-2 relative flex">
                             <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
-                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba el motivo del mensaje</p>
+                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3" role="tooltip">Escriba el motivo del mensaje</p>
                         </div>
                     </label>
                     <input required type="text" name="motivo" oninvalid="showAlert(this,'Introduce un motivo de al menos 5 caracteres de largo')" id="motivo" minlength="5" class=" form-input invalid:text-red-600 " placeholder="Motivo del correo..." title="Escriba el motivo del correo al menos 5 caracteres">
@@ -465,14 +471,14 @@
                         Mensaje 
                         <div class="relative ml-2">
                             <i class="cursor-help fa-solid fa-circle-info ayuda text-xs"></i>
-                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3">Escriba aquí el contenido del mensaje</p>
+                            <p class="text-xs absolute left-full bottom-full text-white p-2 bg-portfolioAzul3" role="tooltip">Escriba aquí el contenido del mensaje</p>
                         </div>
                     </label>
                     <textarea required placeholder="Cual es tu duda?" minlength="10" oninvalid="showAlert(this,'Campo requerido')" name="mensaje" id="mensaje" cols="30" rows="10" form="" class="form-textarea invalid:text-red-600"></textarea>
                     <p id="mensaje_error" class="text-xs text-red-700 text-alert"></p>
                 </div>
 
-                <button type="submit" onclick="messageFailure()" id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+                <button aria-label="Enviar formulario" type="submit" onclick="messageFailure()" id="enviar" class="hover:animate-hoverButton active:animate-activeButton p-2 text-xl self-start flex items-center">Enviar <i class="fa-regular fa-paper-plane"></i></button>
             </form>
             <script src="utilities/js/showFormActions.js"></script> <!-- JS Muestra la alerta encima del formulario y muestra mensajes de error -->
         </section>
@@ -484,9 +490,9 @@
                 <li><h3>Gracias por visitar mi Portfolio</h3></li>
                 <li class="text-xs">© 2023 Juan Navarrete. Derechos reservados</li>
                 <li class="text-portfolioAzul2 text-2xl flex justify-center gap-3 mt-6">
-                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-github"></i></a>
-                    <a href="" class="hover:text-portfolioAzul3"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="" aria-label="enlace linkedin" class="hover:text-portfolioAzul3"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="" aria-label="enlace github" class="hover:text-portfolioAzul3"><i class="fa-brands fa-github"></i></a>
+                    <a href="" aria-label="enlace twitter" class="hover:text-portfolioAzul3"><i class="fa-brands fa-square-twitter"></i></a>
                 </li>
             </ol>
         </footer>
