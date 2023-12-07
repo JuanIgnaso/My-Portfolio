@@ -58,6 +58,23 @@ input,textarea{
     background-color:var(--text-background-selected-color);
 }
 
+ /*Niveles de habilidades*/
+ .lvl_basico{
+    color: rgb(59 130 246);
+  }
+
+  .lvl_medio{
+    color:var(--color-lvl-medio);
+  }
+
+  .lvl_alto{
+    color:rgb(234 88 12);
+  }
+
+  .lvl_avanzado{
+    color: rgb(220 38 38);
+  }
+
 
 /*CABECERA DE LA WEB----------------------------------------------*/
 #titular_pagina{
@@ -263,12 +280,15 @@ input,textarea{
     --color-cabecera-experiencia:#4c1d95;
     --experiencia:#38598b;
     --color-cursor:none;
+    --color-contact-icon:#113f67;
+    --color-lvl-medio:rgb(202 138 4);
 }
 
 /*COLORES MODO OSCURO*/
 .dark-mode{
     --color-body:#0f172a;
     --color-texto:#e7eaf6;
+    --color-items-lista:rgb(59 130 246);
     --color-cabecera-secundaria:#a2a8d3;
     --color-fondo:#113f67;
     --color-cabeceras-principales:#808ad3;
@@ -279,6 +299,8 @@ input,textarea{
     --color-cabecera-experiencia:#c084fc;
     --experiencia:#e7eaf6;
     --color-cursor:rgba(255,255,255,0.7);
+    --color-contact-icon:rgb(59 130 246);
+    --color-lvl-medio:rgb(253 224 71);
 }
 /*-------------------------------------------------*/
 

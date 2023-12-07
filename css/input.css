@@ -26,6 +26,11 @@
 }
 
 @layer components{
+ 
+  .contacto_icono{
+    color:var(--color-contact-icon);
+  }
+
   .error{
     background-color: theme('colors.error');
   }

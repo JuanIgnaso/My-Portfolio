@@ -1,18 +1,18 @@
 <!-- <!DOCTYPE html> -->
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/output.css">
     <link rel="stylesheet" href="/css/Portfolio.css">
-    <link rel="stylesheet" href="/fontawesome/css/all.css"><!-- ICONOS FONTAWESOME -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.css"><!-- ICONOS FONTAWESOME -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>Mi Portfolio</title>
 </head>
 
 <body class="animate-web_Load">
     <!-- BOTÓN DE DARKMODE -->
-    <div class="top-[10px] left-[10px] fixed z-10 flex flex-col md:flex-row align-center gap-2">
+    <div class="top-[10px] left-[10px] fixed z-10 flex flex-col md:flex-row align-center gap-2" role="menu">
         <button id="darkmode-btn" class="w-[40px] h-[40px]"><i class="fa-regular fa-sun text-xl"></i></button>
         <button id="disable_light" class="group relative flex">
             <i class="fa-regular fa-lightbulb"></i><span class="hidden group-hover:inline" id="enable_light"> Deshabilitar</span>
@@ -30,7 +30,7 @@
 
     <!-- MENÚ DE INICIO **************************************-->
 
-    <nav  class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col bottom-[40%] items-start portrait:bottom-0 portrait:right-0 landscape:bottom-0">
+    <nav class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col bottom-[40%] items-start portrait:bottom-0 portrait:right-0 landscape:bottom-0">
         <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu pr-[5px] sm:pr-0">
             <li class="mb-[5px] hover:font-bold"><a href="#sobreMi">Sobre Mi</a></li>
             <li class="mb-[5px] hover:font-bold"><a href="#habilidades">Mis Habilidades</a></li>
@@ -45,7 +45,7 @@
     <!-- ********************************* -->
 
     <!-- CONTENEDOR DE LA WEB *******************************-->
-    <div class="mt-[20px] w-[90%] sm:w-[80%] lg:w-[60%] m-auto">
+    <main class="mt-[20px] w-[90%] sm:w-[80%] lg:w-[60%] m-auto">
         
         <!-- CABECERA DE LA WEB -->
         <header class='text-left'>
@@ -302,7 +302,7 @@
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="utilities/img/Sample_Image.png" alt="Avatar">
+                        <img src="utilities/img/Sample_Image.png" alt="preview de la imagen del proyecto">
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
@@ -336,7 +336,7 @@
                     <p class="text-center text-xs">Selecciona para mostrar</p>
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="utilities/img/Sample_Image_2.png" alt="Avatar">
+                        <img src="utilities/img/Sample_Image_2.png"  alt="preview de la imagen del proyecto">
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
@@ -383,7 +383,7 @@
                         <li class="flex flex-col items-center justify-end mb-2 mt-2 relative">
                             <div class="group self-end">
                                 Linkedin 
-                                <a href=""><i class="fa-brands fa-linkedin-in text-portfolioAzul4"></i></a>
+                                <a href=""><i class="fa-brands fa-linkedin-in  contacto_icono"></i></a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
                             </div>
                         </li>
@@ -391,7 +391,7 @@
                         <li class="flex flex-col items-center justify-end mb-2 relative">
                             <div class="group self-end">
                                 +34 999 999 999
-                                <i class="fa-solid fa-phone  text-portfolioAzul4"></i>
+                                <i class="fa-solid fa-phone contacto_icono"></i>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
                             </div>
                         </li>
@@ -399,7 +399,7 @@
                         <li class="flex flex-col items-center justify-end mb-2 relative">
                             <div class="group self-end">
                                 Github
-                                <a href=""><i class="fa-brands fa-github text-portfolioAzul4"></i></a>
+                                <a href=""><i class="fa-brands fa-github  contacto_icono"></i></a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul3 w-0 m-auto"></div>
                             </div>
                         </li>
@@ -490,6 +490,6 @@
                 </li>
             </ol>
         </footer>
-    </div>
+    </main>
 </body>
 </html>

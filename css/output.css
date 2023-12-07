@@ -815,6 +815,10 @@ body {
   padding-bottom: 0;
 }
 
+.contacto_icono{
+  color:var(--color-contact-icon);
+}
+
 .error{
   background-color: #ff0000;
 }
