@@ -43,7 +43,8 @@
 
     //Mostrar Alerta de formulario Incorrecto.
     function messageFailure(){
-        if(document.querySelectorAll('#formulario_mensaje input:invalid').length != 0){
+        //Selecciona todas los elementos del formulario que estén inválidos
+        if(document.querySelectorAll('#formulario_mensaje :invalid').length != 0){
             notificacion.style.display = 'block';
             showUpCard('error p-2 text-white font-bold cursor-auto','Algun/os campo/s esta/n incorrecto/s, revisa el formulario.');
         }
