@@ -32,13 +32,13 @@
 <aside>
     <nav class=" w-[50%] sm:w-[20%] lg:w-[14%] xl:w-[12%] m-[8px] text-right sm:text-left fixed z-20 flex flex-col bottom-[40%] items-start portrait:bottom-0 portrait:right-0 landscape:bottom-0">
         <ol id="contentmenu" class="contenido_menu_inicio mostrar_menu pr-[5px] sm:pr-0">
-            <li class="mb-[5px] hover:font-bold"><a href="#sobreMi">Sobre Mi</a></li>
-            <li class="mb-[5px] hover:font-bold"><a href="#habilidades">Mis Habilidades</a></li>
-            <li class="mb-[5px] hover:font-bold"><a href="#estudios">Mis Estudios</a></li>
-            <li class="mb-[5px] hover:font-bold"><a href="#experiencia">Experiencia Laboral</a></li>
-            <li class="mb-[5px] hover:font-bold"><a href="#proyectos">Mis Proyectos</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#sobreMi" tabindex="6">Sobre Mi</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#habilidades" tabindex="5">Mis Habilidades</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#estudios" tabindex="4">Mis Estudios</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#experiencia" tabindex="3">Experiencia Laboral</a></li>
+            <li class="mb-[5px] hover:font-bold"><a href="#proyectos" tabindex="2">Mis Proyectos</a></li>
         </ol>
-        <button id="btnMenu" class="botonMenu transformar font-bold text-left border-t-4 border-portfolioAzul2 portrait:self-end portrait:justify-end"><i class="fa-solid fa-house"></i></button>
+        <button tabindex="1" id="btnMenu" class="botonMenu transformar font-bold text-left border-t-4 border-portfolioAzul2 portrait:self-end portrait:justify-end"><i class="fa-solid fa-house"></i></button>
         <script src="utilities/js/activateLeftMenu.js"></script> <!-- JS Abrir el menú lateral -->
         <script src="utilities/js/changeSideBarButton.js"></script> <!-- JS Cambiar de lado el menú en pantallas inferiores a 1000px -->
     </nav>
@@ -80,20 +80,14 @@
             <article class="section_content">
                 <h3 class="mb-[10px]">Lenguajes</h3>
                 <ol class="mb-[10px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
-
                     <li class="border-4 border-cyan-800 habilidades-container">
                         <ol class=" flex flex-col items-center gap-2">
-                            <li>
-                                <h4 class="text-center">Nivel: <strong>Medio</strong></h4>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-html5 habilidades-icon"></i>
-                            </li>
-                            <li>
-                                <p>HTML</p>
-                            </li>
+                            <li><h4 class="text-center">Nivel: <strong>Medio</strong></h4></li>
+                            <li><i class="fa-brands fa-html5 habilidades-icon"></i></li>
+                            <li><p>HTML</p></li>
                         </ol>
                     </li>
+                   
 
                     <li class="border-4 border-cyan-800 habilidades-container">
                         <ol class=" flex flex-col items-center gap-2">
@@ -309,8 +303,8 @@
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
-                            <li><h3>Juego Piedra Papel Tijeras</h3></li>
-                            <li><p>Clásico juego de piedra papel y tijeras hecho con JavaScript</p></li>
+                            <li><h3 aria-label="aplicación">Juego Piedra Papel Tijeras</h3></li>
+                            <li><p aria-label="descripción de la aplicación">Clásico juego de piedra papel y tijeras hecho con JavaScript</p></li>
                             <li>
                                 <ol class="flex justify-center gap-2 font-bold lenguajes">
                                     <li>JS</li>
@@ -322,11 +316,11 @@
                         <!-- Opciones -->
                         <ol class="flex justify-center gap-3 absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] font-black">
                             <li class="group">
-                                <a aria-label="ver proyecto" href="index.html">Ver</a>
+                                <a  aria-label="ver proyecto" href="index.html">Ver</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                             <li class="group">
-                                <a aria-label="descargar proyecto" href="https://google.es">Descargar</a>
+                                <a  aria-label="descargar proyecto" href="https://google.es">Descargar</a>
                                 <div class="group-hover:animate-expand opacity-0 border-2 border-portfolioAzul5 w-0 m-auto"></div>
                             </li>
                         </ol>
@@ -343,10 +337,10 @@
                       </div>
                       <div class="flip-card-back p-2">
                         <ol>
-                            <li><h3>Juego Tres En Raya</h3></li>
-                            <li><p>Juego de Tres En Raya creado con CSS y JS</p></li>
+                            <li><h3 aria-label="aplicación">Juego Tres En Raya</h3></li>
+                            <li><p aria-label="explicación de la aplicación">Juego de Tres En Raya creado con CSS y JS</p></li>
                             <li>
-                                <ol class="flex justify-center gap-2 font-bold lenguajes">
+                                <ol aria-label="lenguajes usados" class="flex justify-center gap-2 font-bold lenguajes">
                                     <li>JS</li>
                                     <li>CSS</li>
                                     <li>HTML</li>
@@ -414,7 +408,7 @@
             <h3 class="text-3xl mb-2">O puedes enviarme un correo aquí:</h3>
             
             <!-- FORMULARIO DE LA WEB ***************************************-->
-            <form action="destino.php" method="post" target="_blank" oninvalid="algomal()" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400" id="formulario_mensaje">
+            <form action="destino.php" method="post" target="_blank" onsubmit="messajeSuccess()" class="flex flex-col border-t-2 pt-2 border-gray-400" id="formulario_mensaje">
                
                <!-- Alert card -->
                <div role="alert">

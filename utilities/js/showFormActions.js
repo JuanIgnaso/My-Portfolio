@@ -24,6 +24,23 @@
 
     }
 
+
+    //Evita que los inputs muestren el mensaje de error por defecto al
+    //darle la botón de submit.
+
+    document.addEventListener('invalid', (function(){
+        return function(e) {
+          //previene al navegador de mostrar el mensaje de error
+          e.preventDefault();
+          // opcionalmente se puede poner función que muestre los errores de 
+          //validación
+          // myValidation();
+        };
+    })(), true);
+
+
+
+
     //Mostrar Alerta de formulario Incorrecto.
     function messageFailure(){
         if(document.querySelectorAll('#formulario_mensaje input:invalid').length != 0){
