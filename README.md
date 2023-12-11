@@ -5,4 +5,4 @@
  <li>HTML</li>
  <li>JavaScript</li>
 </ol>
-No es descartable añadir más en un futuro...
+Práctica de CSS,HTML y JS creando mi Portfolio, con validación de formulario y un modo oscuro.
